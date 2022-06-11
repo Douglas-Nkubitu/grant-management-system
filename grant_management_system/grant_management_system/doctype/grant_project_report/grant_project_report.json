@@ -1,0 +1,281 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-05-13 21:01:17.983167",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "activity_type",
+  "is_budget_update",
+  "date",
+  "column_break_4",
+  "owner",
+  "applicant_name",
+  "institution",
+  "institution_name",
+  "references_section",
+  "grant_project",
+  "column_break_11",
+  "grant_project_activity",
+  "sb_items",
+  "items",
+  "budget",
+  "grant_project_update_budget_item",
+  "section_break_15",
+  "users",
+  "description_sb",
+  "description",
+  "more_details",
+  "company",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "GRNT-PROJ-RPT-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "activity_type",
+   "fieldtype": "Link",
+   "label": "Activity Type",
+   "options": "Grant Activity Type"
+  },
+  {
+   "default": "0",
+   "fetch_from": "activity_type.is_budget_update",
+   "fetch_if_empty": 1,
+   "fieldname": "is_budget_update",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Is Budget Update"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "__user",
+   "fetch_from": "grant_project.owner",
+   "fetch_if_empty": 1,
+   "fieldname": "owner",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "From Applicant",
+   "oldfieldname": "employee",
+   "oldfieldtype": "Link",
+   "options": "User",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "owner.full_name",
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "Name",
+   "oldfieldname": "employee_name",
+   "oldfieldtype": "Data",
+   "read_only": 1,
+   "width": "150px"
+  },
+  {
+   "fetch_from": "grant_project.institution",
+   "fieldname": "institution",
+   "fieldtype": "Link",
+   "label": "Administering Institution",
+   "options": "Member",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "institution.member_name",
+   "fieldname": "institution_name",
+   "fieldtype": "Read Only",
+   "label": "Institution Name"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "references_section",
+   "fieldtype": "Section Break",
+   "label": "References"
+  },
+  {
+   "fieldname": "grant_project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Grant Project",
+   "options": "Grant Project"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grant_project_activity",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Grant Project Activity",
+   "options": "Grant Project Activity",
+   "remember_last_selected_value": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sb_items",
+   "fieldtype": "Section Break",
+   "label": "Items",
+   "oldfieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "oldfieldname": "expense_voucher_details",
+   "oldfieldtype": "Table",
+   "options": "Grant Project Report Item"
+  },
+  {
+   "collapsible_depends_on": "eval:doc.is_budget_update==0",
+   "depends_on": "eval:doc.is_budget_update",
+   "fieldname": "budget",
+   "fieldtype": "Section Break",
+   "label": "Budget"
+  },
+  {
+   "fieldname": "grant_project_update_budget_item",
+   "fieldtype": "Table",
+   "label": "Grant Project Update Budget Item",
+   "mandatory_depends_on": "eval:doc.is_budget_update",
+   "options": "Grant Project Activity Budget Item"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "label": "Users"
+  },
+  {
+   "fieldname": "users",
+   "fieldtype": "Table",
+   "label": "Users",
+   "options": "Grant Project Update User"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "description_sb",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "more_details",
+   "fieldtype": "Section Break",
+   "label": "More Details"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "oldfieldname": "company",
+   "oldfieldtype": "Link",
+   "options": "Company",
+   "remember_last_selected_value": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Grant Project Report",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "icon": "fa fa-money",
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-06-11 19:37:22.502568",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Project Report",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Member",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Portal User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Principle Investigator",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "owner, applicant_name, institution",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "timeline_field": "owner",
+ "track_changes": 1
+}
