@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:grant_parameter_section",
+ "creation": "2021-01-25 11:41:56.254344",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "grant_parameter_section",
+  "parent_grant_parameter_section",
+  "column_break_3",
+  "is_group",
+  "disabled",
+  "section_break_2",
+  "description",
+  "lft",
+  "rgt",
+  "old_parent"
+ ],
+ "fields": [
+  {
+   "fieldname": "grant_parameter_section",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Grant Parameter Section",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "parent_grant_parameter_section",
+   "fieldtype": "Link",
+   "label": "Parent Grant Parameter Section",
+   "options": "Grant Parameter Section"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "Old Parent",
+   "options": "Grant Parameter Section"
+  }
+ ],
+ "icon": "icon-flag",
+ "is_tree": 1,
+ "links": [],
+ "modified": "2022-06-11 19:33:38.359379",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Parameter Section",
+ "nsm_parent_field": "parent_grant_parameter_section",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Non Profit Member"
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Portal User",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "ASC"
+}
