@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	width: 100%;
+	margin-right: auto;
+    margin-left: auto;
+}
+
+.portal {
+	background-color: #fff;
+	border: 3px solid #d1d8dd;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	border-top-color: #2490ef;
+	border-top: 5px solid #2490ef;
+	display: flex;
+	max-width: 100%;
+	margin: 20px;
+	overflow: hidden;
+
+}
+
+.portal-info {
+	padding: 30px;
+	position: relative;
+	width: 100%;
+}

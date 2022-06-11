@@ -1,0 +1,69 @@
+{% extends "templates/web.html" %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block breadcrumbs %}
+<div class="item-breadcrumbs small text-muted">
+	{% include "templates/includes/breadcrumbs.html" %}
+</div>
+{% endblock %}
+
+{% block page_content %}
+<style>{% include "templates/styles/portal.css" %}</style>
+
+<div class="row">
+	<div class="col-sm-12">
+		<div class="container">
+			<div class="portal">
+				<div class="portal-info">
+                    <h3><a class="d-md-flex justify-content-md-center">GRANT DESCRIPTION</a></h3>
+                    <h6><a class="d-md-flex justify-content-md-center">{{ description }}</a></h6>		
+				</div>
+			</div>
+		</div>
+	</div>
+</div>		
+
+<div class="row" style="margin-top: 20px">
+	<div class="col-sm-12">
+		<div class="container">
+			<div class="portal">
+				<div class="portal-info">
+					<table class="table table-bordered table-striped">
+						<thead>
+							<tr>
+							<th width="35%" class="text-left">Parameter Name</th>
+							<th width="65%" class="text-left">Description</th>
+							</tr>
+						</thead>
+						<tbody>	
+							{% for item in doc.grant_application_parameters %}
+							<tr>							
+								<td class="text-left">{{ item.parameter }}</td>								
+								<td class="text-left">{{ item.item_description }}</td>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+					{% if closing_date >= frappe.utils.getdate() %}
+					<a class='btn btn-primary'
+					href='/app/grant-application?new-grant-application={{ doc.grant_call }}'>
+					{{ _("Apply Now") }}
+					</a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
+{% block base_scripts %}
+<!-- js should be loaded in body! -->
+<script type="text/javascript" src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/frappe-web.min.js"></script>
+<script type="text/javascript" src="/assets/js/control.min.js"></script>
+<script type="text/javascript" src="/assets/js/dialog.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-4-web.min.js"></script>
+{% endblock %}

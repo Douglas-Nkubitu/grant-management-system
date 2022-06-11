@@ -1,0 +1,82 @@
+{% extends "templates/base.html" %}
+{% set show_search = frappe.db.get_single_value("Grant Management Settings", "show_search") %}
+{% set search_placeholder = frappe.db.get_single_value("Grant Management Settings", "search_placeholder") %}
+
+{% block title %}{{ gms_settings.open_grant_call_portal_title }}{% endblock %}
+
+{% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style> {% include "templates/styles/portal.css" %}</style>
+
+<div class="d-md-flex justify-content-md-center" >
+    <h2>{{ gms_settings.open_grant_call_portal_title }}</h2>
+</div>
+<div class="common-page-style">
+	<div class="container">		
+		{% if show_search %}
+		<div class="d-md-flex justify-content-md-end">
+			<div class="col-sm-3">
+				<input class="form-control" id="search-grant" placeholder="{{ _(search_placeholder) }}">
+			</div>
+		</div>
+		<div class="col-sm-12">
+			<div class="alert alert-dismissible empty-state text-center frappe-card mt-4  hide" id="search-empty-state">
+				<img class="icon icon-xl" src="/assets/frappe/images/ui-states/search-empty-state.svg">
+				<a href="#" class="close-search-empty-state" aria-label="close">&times;</a>
+				<div class="cart-empty-message mt-4 mb-0" style="color: inherit;"> {{ _("No results found") }} </div>
+				<div class="small mb-6"> {{ _("Try some other keyword or explore our Grant Call list.") }} </div>
+			</div>
+		</div>
+		{% endif %}
+	</div>
+</div>
+<div class="container">	
+	{% if active_grant_list %}
+		<div class="cards-parent">
+			<div class="row">	
+				{% for grantcall in active_grant_list %}
+					<div class="col-sm-6" >				
+						<div class="portal">
+							<div class="portal-info">
+								<label style="color:black;">Grant Call:</label> <label>{{ grantcall.name }}</label><br>
+								<label style="color:black;">Grant Name:</label> <label>{{ grantcall.grant_call_name }}</label><br>
+								<label style="color:black;">Programme:</label> <label>{{ grantcall.programme }}</label><br>
+								<label style="color:black;">Discipline:</label> <label>{{ grantcall.discipline }}</label><br>
+								<label style="color:black;">Opening Date:</label> <label>{{ grantcall.opening_date }}</label><br>
+								<label style="color:black;">Closing Date:</label> <label>{{ grantcall.closing_date }}</label><br>
+								<a class='btn btn-primary' href="/{{ grantcall.route }}"> {{ _("More Details To Apply") }}</a> 
+								<!-- <a class='btn btn-primary' href="/login"> {{ _("Sign Up or Login") }}</a>               -->
+							</div>
+						</div>				
+					</div>	
+				{% endfor %}
+			</div>		
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<div class="site-pagination">
+						{% if prev %}
+						<a href="/open-grant-calls/?page={{prev}}" class="btn btn-warning">Prev</a>
+						{% endif %}
+						{% if next %}
+						<a href="/open-grant-calls/?page={{next}}" class="btn btn-primary">Next</a>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+			{% else %}
+			<div class="col-sm-12">		
+				<div class="portal">
+					<div class="portal-info">
+						<div class="portal-empty frappe-card mt-2 justify-content-md-center text-center">
+							<div class="portal-empty-state">
+								<img src="/assets/erpnext/images/ui-states/grant.png">
+							</div>
+							<div class="cart-empty-message mt-4"><h1> {{ gms_settings.no_open_grant_call }}</h1></div>
+						</div>
+					</div>		
+				</div>
+			</div>
+		</div>
+	{% endif %}	
+</div>
+{% endblock %}
