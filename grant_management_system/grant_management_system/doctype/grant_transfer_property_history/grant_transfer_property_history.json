@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "creation": "2022-01-17 20:17:48.218795",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "property",
+  "current",
+  "new",
+  "fieldname"
+ ],
+ "fields": [
+  {
+   "columns": 4,
+   "fieldname": "property",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Property",
+   "read_only": 1
+  },
+  {
+   "columns": 3,
+   "fieldname": "current",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Current",
+   "read_only": 1
+  },
+  {
+   "columns": 3,
+   "fieldname": "new",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "New",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fieldname",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Field Name",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-11 19:01:29.247279",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Transfer Property History",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
