@@ -1,0 +1,138 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:field_of_research_name",
+ "creation": "2021-12-28 12:24:24.072581",
+ "description": "Field of Research",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "field_of_research_name",
+  "parent_field_of_research",
+  "is_group",
+  "image",
+  "column_break_5",
+  "description",
+  "lft",
+  "rgt",
+  "old_parent"
+ ],
+ "fields": [
+  {
+   "fieldname": "field_of_research_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Field of Research Name",
+   "oldfieldname": "item_group_name",
+   "oldfieldtype": "Data",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "parent_field_of_research",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Parent Field of Research",
+   "oldfieldname": "parent_item_group",
+   "oldfieldtype": "Link",
+   "options": "Field of Research"
+  },
+  {
+   "bold": 1,
+   "default": "0",
+   "description": "Only leaf nodes are allowed in transaction",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Group",
+   "oldfieldname": "is_group",
+   "oldfieldtype": "Select"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Image"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "show_in_website",
+   "description": "HTML / Banner that will show on the top of product list.",
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "lft",
+   "no_copy": 1,
+   "oldfieldname": "lft",
+   "oldfieldtype": "Int",
+   "print_hide": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "rgt",
+   "no_copy": 1,
+   "oldfieldname": "rgt",
+   "oldfieldtype": "Int",
+   "print_hide": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "ignore_user_permissions": 1,
+   "label": "old_parent",
+   "no_copy": 1,
+   "oldfieldname": "old_parent",
+   "oldfieldtype": "Data",
+   "options": "Field of Research",
+   "print_hide": 1,
+   "report_hide": 1
+  }
+ ],
+ "icon": "fa fa-sitemap",
+ "image_field": "image",
+ "is_tree": 1,
+ "links": [],
+ "max_attachments": 3,
+ "modified": "2022-06-11 19:09:05.873794",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Field of Research",
+ "name_case": "Title Case",
+ "nsm_parent_field": "parent_field_of_research",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "parent_field_of_research",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
