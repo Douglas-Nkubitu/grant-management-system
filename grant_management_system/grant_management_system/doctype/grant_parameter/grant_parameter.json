@@ -1,0 +1,141 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:grant_parameter_name",
+ "creation": "2021-01-20 13:34:04.698440",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "grant_parameter_name",
+  "programme",
+  "column_break_3",
+  "grant_parameter_section",
+  "parameter_sequence",
+  "column_break_6",
+  "required",
+  "is_numeric",
+  "disabled",
+  "section_break_2",
+  "item_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "grant_parameter_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Grant Parameter Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "programme",
+   "fieldtype": "Table MultiSelect",
+   "in_standard_filter": 1,
+   "label": "Programme",
+   "options": "Grant Parameter Programme",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grant_parameter_section",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Grant Parameter Section",
+   "options": "Grant Parameter Section",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "parameter_sequence",
+   "fieldtype": "Int",
+   "label": "Parameter Sequence",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "required",
+   "fieldtype": "Check",
+   "label": "Required"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_numeric",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "Is Numeric"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item_description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  }
+ ],
+ "icon": "icon-flag",
+ "links": [],
+ "modified": "2022-06-11 19:32:24.293985",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Parameter",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Non Profit Member"
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Portal User",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "ASC"
+}
