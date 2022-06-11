@@ -1,0 +1,224 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-06-24 20:48:07.991895",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "date",
+  "column_break_4",
+  "reviewer",
+  "reviewer_name",
+  "section_break_7",
+  "grant_application",
+  "grant_application_budget_review_item",
+  "section_break_9",
+  "requested_amount",
+  "column_break_11",
+  "reviewed_amount",
+  "reference_section",
+  "grant_call",
+  "column_break_23",
+  "grant_call_name",
+  "sb_more_info",
+  "comments",
+  "company",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "no_copy": 1,
+   "options": "GRNT-APP-BUDG-REV-.YYYY.-",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "__user",
+   "fieldname": "reviewer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Reviewer",
+   "options": "User",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "reviewer.full_name",
+   "fieldname": "reviewer_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Budget Review Section"
+  },
+  {
+   "bold": 1,
+   "fieldname": "grant_application",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Grant Application",
+   "options": "Grant Application",
+   "print_hide": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "grant_application_budget_review_item",
+   "fieldtype": "Table",
+   "label": "Grant Application Budget Review Item",
+   "options": "Grant Application Budget Review Item"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Totals"
+  },
+  {
+   "bold": 1,
+   "fieldname": "requested_amount",
+   "fieldtype": "Currency",
+   "label": "Requested Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "reviewed_amount",
+   "fieldtype": "Currency",
+   "label": "Reviewed Amount",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fetch_from": "grant_application.grant_call",
+   "fieldname": "grant_call",
+   "fieldtype": "Link",
+   "label": "Grant Call",
+   "options": "Grant Call",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "grant_application.grant_call_name",
+   "fetch_if_empty": 1,
+   "fieldname": "grant_call_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Grant Call Name",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sb_more_info",
+   "fieldtype": "Section Break",
+   "label": "More Info"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Text Editor",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Grant Application Budget Review",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-06-11 18:53:56.421358",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Application Budget Review",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Member",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "timeline_field": "grant_application",
+ "track_changes": 1
+}
