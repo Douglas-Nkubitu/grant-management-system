@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "creation": "2021-01-26 16:29:57.170692",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "parameter",
+  "item_description",
+  "response_section",
+  "response",
+  "response_description",
+  "review_section_section",
+  "maximum_score",
+  "column_break_6",
+  "score",
+  "column_break_8",
+  "skip",
+  "comments_section",
+  "comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "parameter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Parameter",
+   "options": "Grant Parameter",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_description",
+   "fieldtype": "Text Editor",
+   "label": "Description",
+   "read_only": 1
+  },
+  {
+   "fieldname": "response_section",
+   "fieldtype": "Section Break",
+   "label": "Response"
+  },
+  {
+   "fieldname": "response",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Response",
+   "read_only": 1
+  },
+  {
+   "fieldname": "response_description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Response Description",
+   "read_only": 1
+  },
+  {
+   "fieldname": "review_section_section",
+   "fieldtype": "Section Break",
+   "label": "Review Section"
+  },
+  {
+   "fieldname": "maximum_score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Maximum Score",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "default": "-1",
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Score"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "skip",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Skip"
+  },
+  {
+   "fieldname": "comments_section",
+   "fieldtype": "Section Break",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Comments"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-11 19:16:44.506605",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Application Review Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
