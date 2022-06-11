@@ -1,0 +1,458 @@
+{
+ "actions": [],
+ "autoname": "GRNT-APP-ACT-.YYYY.-.#####",
+ "creation": "2022-01-21 14:25:40.142089",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "activity",
+  "grant_application",
+  "type",
+  "owner",
+  "applicant_name",
+  "is_group",
+  "column_break_5",
+  "status",
+  "priority",
+  "work_plan_weight",
+  "parent_grant_application_activity",
+  "color",
+  "completed_by",
+  "completed_on",
+  "sb_timeline",
+  "expected_start_date",
+  "expected_completion_date",
+  "column_break_14",
+  "expected_time_in_days",
+  "progress",
+  "is_milestone",
+  "sb_means_of_verification",
+  "expected_output",
+  "column_break_26",
+  "means_of_verification",
+  "responsibility_section",
+  "person_responsible_email",
+  "person_responsible_name",
+  "column_break_8",
+  "institution",
+  "institution_name",
+  "budget_section",
+  "grant_budget_template",
+  "grant_application_activity_budget_item",
+  "activity_budget",
+  "details_section",
+  "comments",
+  "dependencies_section",
+  "depends_on",
+  "depends_on_grant_activities",
+  "sb_more_info",
+  "review_date",
+  "closing_date",
+  "column_break_34",
+  "grant_call",
+  "company",
+  "lft",
+  "rgt",
+  "old_parent"
+ ],
+ "fields": [
+  {
+   "description": "Key Action Step (Activity)",
+   "fieldname": "activity",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Activity",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "fetch_from": "grant_project.grant_application",
+   "fieldname": "grant_application",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Grant Application",
+   "options": "Grant Application",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Type",
+   "options": "Task Type"
+  },
+  {
+   "fetch_from": "grant_project.owner",
+   "fieldname": "owner",
+   "fieldtype": "Link",
+   "label": "Owner",
+   "options": "User"
+  },
+  {
+   "fetch_from": "owner.full_name",
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "options": "Open\nWorking\nPending Review\nOverdue\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent",
+   "search_index": 1
+  },
+  {
+   "fieldname": "work_plan_weight",
+   "fieldtype": "Float",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "parent_grant_application_activity",
+   "fieldtype": "Link",
+   "label": "Parent Grant Application Activity",
+   "options": "Grant Application Activity"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Color",
+   "label": "Color"
+  },
+  {
+   "depends_on": "eval: doc.status == \"Completed\"",
+   "fieldname": "completed_by",
+   "fieldtype": "Link",
+   "label": "Completed By",
+   "options": "User"
+  },
+  {
+   "depends_on": "eval: doc.status == \"Completed\"",
+   "fieldname": "completed_on",
+   "fieldtype": "Date",
+   "label": "Completed On",
+   "mandatory_depends_on": "eval: doc.status == \"Completed\""
+  },
+  {
+   "fieldname": "sb_timeline",
+   "fieldtype": "Section Break",
+   "label": "Timeline"
+  },
+  {
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected Start Date",
+   "reqd": 1
+  },
+  {
+   "description": "An expected completion date (month and year) must be defined for each action step.",
+   "fieldname": "expected_completion_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected Completion Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expected_time_in_days",
+   "fieldtype": "Float",
+   "label": "Expected Time (in days)"
+  },
+  {
+   "fieldname": "progress",
+   "fieldtype": "Percent",
+   "label": "% Progress",
+   "no_copy": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_milestone",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Milestone"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sb_means_of_verification",
+   "fieldtype": "Section Break",
+   "label": "Expected Output and Means of Verification"
+  },
+  {
+   "fieldname": "expected_output",
+   "fieldtype": "Text Editor",
+   "label": "Expected Output"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "means_of_verification",
+   "fieldtype": "Text Editor",
+   "label": "Means of Verification"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "responsibility_section",
+   "fieldtype": "Section Break",
+   "label": "Responsibility"
+  },
+  {
+   "fieldname": "person_responsible_email",
+   "fieldtype": "Data",
+   "label": "Person Responsible Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "description": "A responsible person must be identified for each action step and the institution",
+   "fieldname": "person_responsible_name",
+   "fieldtype": "Data",
+   "label": "Person Responsible Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "institution",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Institution Responsible",
+   "options": "Member",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "institution.member_name",
+   "fieldname": "institution_name",
+   "fieldtype": "Data",
+   "label": "Institution Name",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "budget_section",
+   "fieldtype": "Section Break",
+   "label": "Budget"
+  },
+  {
+   "fieldname": "grant_budget_template",
+   "fieldtype": "Link",
+   "label": "Budget Template",
+   "options": "Grant Budget Template"
+  },
+  {
+   "fieldname": "grant_application_activity_budget_item",
+   "fieldtype": "Table",
+   "label": "Grant Application Activity Budget Item",
+   "options": "Grant Application Activity Budget Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "activity_budget",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Activity Budget",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "description": "Comments are optional.",
+   "fieldname": "comments",
+   "fieldtype": "Text Editor",
+   "label": "Comments"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "dependencies_section",
+   "fieldtype": "Section Break",
+   "label": "Dependencies"
+  },
+  {
+   "fieldname": "depends_on",
+   "fieldtype": "Table",
+   "label": "Dependent Grant Activities",
+   "options": "Grant Application Activity Depends On"
+  },
+  {
+   "fieldname": "depends_on_grant_activities",
+   "fieldtype": "Code",
+   "hidden": 1,
+   "label": "Depends on Grant Activities",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sb_more_info",
+   "fieldtype": "Section Break",
+   "label": "More Info"
+  },
+  {
+   "depends_on": "eval:doc.status == \"Closed\" || doc.status == \"Pending Review\"",
+   "fieldname": "review_date",
+   "fieldtype": "Date",
+   "label": "Review Date"
+  },
+  {
+   "depends_on": "eval:doc.status == \"Closed\"",
+   "fieldname": "closing_date",
+   "fieldtype": "Date",
+   "label": "Closing Date"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "grant_project.grant_call",
+   "fieldname": "grant_call",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Grant Call",
+   "options": "Grant Call",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "grant_project.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "remember_last_selected_value": 1
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "lft",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "rgt",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "ignore_user_permissions": 1,
+   "label": "Old Parent",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_tree": 1,
+ "links": [],
+ "modified": "2022-06-11 18:49:37.216727",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Application Activity",
+ "nsm_parent_field": "parent_grant_application_activity",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Member",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Portal User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Principle Investigator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "activity",
+ "show_name_in_global_search": 1,
+ "show_preview_popup": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "timeline_field": "grant_application",
+ "title_field": "activity",
+ "track_changes": 1,
+ "track_seen": 1
+}
