@@ -1,0 +1,483 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-01-17 14:23:28.950986",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "grant_application",
+  "grant_call",
+  "grant_call_name",
+  "project_type",
+  "column_break_5",
+  "owner",
+  "applicant_name",
+  "institution",
+  "institution_name",
+  "column_break_8",
+  "expected_start_date",
+  "expected_end_date",
+  "priority",
+  "status",
+  "is_active",
+  "percent_complete_method",
+  "percent_complete",
+  "section_break0",
+  "notes",
+  "section_break_18",
+  "actual_start_date",
+  "actual_time",
+  "column_break_20",
+  "actual_end_date",
+  "project_details",
+  "estimated_budget",
+  "column_break_28",
+  "company",
+  "monitor_progress",
+  "collect_progress",
+  "holiday_list",
+  "frequency",
+  "from_time",
+  "to_time",
+  "first_email",
+  "second_email",
+  "daily_time_to_send",
+  "day_to_send",
+  "weekly_time_to_send",
+  "column_break_45",
+  "message",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "GRNT-PROJ-.YYYY.-",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "grant_application",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Grant Application",
+   "options": "Grant Application"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "fetch_from": "grant_application.grant_call",
+   "fieldname": "grant_call",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Grant Call",
+   "options": "Grant Call",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "grant_application.grant_call_name",
+   "fieldname": "grant_call_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Grant Call Name"
+  },
+  {
+   "bold": 1,
+   "default": "Internal",
+   "fieldname": "project_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project Type",
+   "options": "Internal\nExternal"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "default": "__user",
+   "fetch_from": "grant_application.owner",
+   "fetch_if_empty": 1,
+   "fieldname": "owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Owner",
+   "oldfieldtype": "Data",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "owner.full_name",
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "read_only": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "fetch_from": "grant_application.institution",
+   "fieldname": "institution",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Administering Institution",
+   "options": "Member",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "grant_application.institution_name",
+   "fieldname": "institution_name",
+   "fieldtype": "Read Only",
+   "label": "Institution Name"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "default": "Today",
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Expected Start Date",
+   "oldfieldname": "project_start_date",
+   "oldfieldtype": "Date",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "expected_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected End Date",
+   "oldfieldname": "completion_date",
+   "oldfieldtype": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Priority",
+   "options": "Medium\nLow\nHigh"
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "oldfieldname": "status",
+   "oldfieldtype": "Select",
+   "options": "Open\nCompleted\nCancelled\nExpired",
+   "search_index": 1
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Is Active",
+   "oldfieldname": "is_active",
+   "oldfieldtype": "Select",
+   "options": "Yes\nNo"
+  },
+  {
+   "default": "Task Completion",
+   "fieldname": "percent_complete_method",
+   "fieldtype": "Select",
+   "label": "% Complete Method",
+   "options": "Manual\nTask Completion\nTask Progress\nTask Weight"
+  },
+  {
+   "bold": 1,
+   "fieldname": "percent_complete",
+   "fieldtype": "Percent",
+   "label": "% Completed",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break0",
+   "fieldtype": "Section Break",
+   "label": "Notes",
+   "oldfieldtype": "Section Break",
+   "options": "fa fa-list"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes",
+   "oldfieldname": "notes",
+   "oldfieldtype": "Text Editor"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break",
+   "label": "Start and End Dates"
+  },
+  {
+   "fieldname": "actual_start_date",
+   "fieldtype": "Date",
+   "label": "Actual Start Date"
+  },
+  {
+   "fieldname": "actual_time",
+   "fieldtype": "Float",
+   "label": "Actual Time (in Months)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_end_date",
+   "fieldtype": "Date",
+   "label": "Actual End Date",
+   "oldfieldname": "act_completion_date",
+   "oldfieldtype": "Date"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "project_details",
+   "fieldtype": "Section Break",
+   "label": "Costing and Budgeting",
+   "oldfieldtype": "Section Break",
+   "options": "fa fa-money"
+  },
+  {
+   "fetch_from": "grant_application.amount",
+   "fieldname": "estimated_budget",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Estimated Budget",
+   "oldfieldname": "project_value",
+   "oldfieldtype": "Currency",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "remember_last_selected_value": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "monitor_progress",
+   "fieldtype": "Section Break",
+   "label": "Monitor Progress"
+  },
+  {
+   "default": "0",
+   "fieldname": "collect_progress",
+   "fieldtype": "Check",
+   "label": "Collect Progress"
+  },
+  {
+   "depends_on": "collect_progress",
+   "fieldname": "holiday_list",
+   "fieldtype": "Link",
+   "label": "Holiday List",
+   "options": "Holiday List"
+  },
+  {
+   "depends_on": "eval:doc.collect_progress == true",
+   "fieldname": "frequency",
+   "fieldtype": "Select",
+   "label": "Frequency To Collect Progress",
+   "options": "Daily\nWeekly\nMonthly\nQuarterly"
+  },
+  {
+   "depends_on": "eval:(doc.frequency == \"Hourly\" && doc.collect_progress)",
+   "fieldname": "from_time",
+   "fieldtype": "Time",
+   "label": "From Time"
+  },
+  {
+   "depends_on": "eval:(doc.frequency == \"Hourly\" && doc.collect_progress)",
+   "fieldname": "to_time",
+   "fieldtype": "Time",
+   "label": "To Time"
+  },
+  {
+   "depends_on": "eval:(doc.frequency == \"Twice Daily\" && doc.collect_progress == true)\n\n",
+   "fieldname": "first_email",
+   "fieldtype": "Time",
+   "label": "First Email"
+  },
+  {
+   "depends_on": "eval:(doc.frequency == \"Twice Daily\" && doc.collect_progress == true)",
+   "fieldname": "second_email",
+   "fieldtype": "Time",
+   "label": "Second Email"
+  },
+  {
+   "depends_on": "eval:(doc.frequency == \"Daily\" && doc.collect_progress == true)",
+   "fieldname": "daily_time_to_send",
+   "fieldtype": "Time",
+   "label": "Time to send"
+  },
+  {
+   "depends_on": "eval:(doc.frequency == \"Weekly\" && doc.collect_progress == true)",
+   "fieldname": "day_to_send",
+   "fieldtype": "Select",
+   "label": "Day to Send",
+   "options": "Monday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nSunday"
+  },
+  {
+   "depends_on": "eval:(doc.frequency == \"Weekly\" && doc.collect_progress == true)",
+   "fieldname": "weekly_time_to_send",
+   "fieldtype": "Time",
+   "label": "Time to send"
+  },
+  {
+   "fieldname": "column_break_45",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "collect_progress",
+   "description": "Message will be sent to the users to get their status on the Project",
+   "fieldname": "message",
+   "fieldtype": "Text",
+   "label": "Message",
+   "mandatory_depends_on": "collect_progress"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Grant Project",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "icon": "fa fa-puzzle-piece",
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Workplan Activities",
+   "link_doctype": "Grant Project Activity",
+   "link_fieldname": "grant_project"
+  },
+  {
+   "group": "Disbursements",
+   "link_doctype": "Grant Project Disbursement",
+   "link_fieldname": "grant_project"
+  },
+  {
+   "group": "Project Reporting",
+   "link_doctype": "Grant Project Report",
+   "link_fieldname": "grant_project"
+  },
+  {
+   "group": "Modifications",
+   "link_doctype": "Grant Application",
+   "link_fieldname": "grant_project"
+  },
+  {
+   "group": "Transfers & Extensions",
+   "link_doctype": "Grant Transfer",
+   "link_fieldname": "grant_project"
+  },
+  {
+   "group": "Change of CO-PIs",
+   "link_doctype": "Grant Project Endorsement",
+   "link_fieldname": "grant_project"
+  }
+ ],
+ "max_attachments": 4,
+ "modified": "2022-06-11 18:56:06.685304",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Project",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All"
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Member",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Principle Investigator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Portal User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": " applicant_name, grant_application, grant_call_name, institution_name, status, is_active",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "timeline_field": "owner",
+ "title_field": "applicant_name",
+ "track_changes": 1,
+ "track_seen": 1
+}
