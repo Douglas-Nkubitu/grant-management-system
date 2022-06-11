@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "creation": "2021-05-16 22:41:15.066173",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "outputs",
+  "activities",
+  "column_break_3",
+  "indicators",
+  "means_of_verification",
+  "timeline_in_months",
+  "column_break_7",
+  "comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "outputs",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Outputs",
+   "reqd": 1
+  },
+  {
+   "fieldname": "activities",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Activities",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "indicators",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Indicators",
+   "reqd": 1
+  },
+  {
+   "fieldname": "means_of_verification",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Means of Verification",
+   "reqd": 1
+  },
+  {
+   "fieldname": "timeline_in_months",
+   "fieldtype": "Data",
+   "label": "Timeline in Months (1-36)"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Comments are optional.",
+   "fieldname": "comments",
+   "fieldtype": "Text Editor",
+   "label": "Comments"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-11 19:14:11.211204",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Application Logical Frame Work",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
