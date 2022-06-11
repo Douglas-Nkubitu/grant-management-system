@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include grant_management_system *.css
+recursive-include grant_management_system *.csv
+recursive-include grant_management_system *.html
+recursive-include grant_management_system *.ico
+recursive-include grant_management_system *.js
+recursive-include grant_management_system *.json
+recursive-include grant_management_system *.md
+recursive-include grant_management_system *.png
+recursive-include grant_management_system *.py
+recursive-include grant_management_system *.svg
+recursive-include grant_management_system *.txt
+recursive-exclude grant_management_system *.pyc
