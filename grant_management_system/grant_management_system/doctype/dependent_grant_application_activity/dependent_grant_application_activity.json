@@ -1,0 +1,30 @@
+{
+ "actions": [],
+ "creation": "2022-05-13 20:29:18.171347",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "grant_application_activity"
+ ],
+ "fields": [
+  {
+   "fieldname": "grant_application_activity",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Grant Application Activity",
+   "options": "Grant Application Activity",
+   "remember_last_selected_value": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-11 19:08:00.661124",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Dependent Grant Application Activity",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
