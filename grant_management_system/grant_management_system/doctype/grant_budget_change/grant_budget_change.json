@@ -1,0 +1,282 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "GRNT-BUDG-CHG-.YYYY.-.#####",
+ "creation": "2022-01-18 04:10:09.300444",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "grant_project",
+  "reason",
+  "date",
+  "column_break_4",
+  "owner",
+  "applicant_name",
+  "institution",
+  "institution_name",
+  "sb_details",
+  "grant_application",
+  "column_break_11",
+  "budget_template",
+  "section_break_13",
+  "items",
+  "totals_section",
+  "applied_budget_amount",
+  "column_break_16",
+  "change_in_budget_amount",
+  "description_sb",
+  "description",
+  "more_details",
+  "company",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "grant_project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Grant Project",
+   "options": "Grant Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Data",
+   "label": "Reason",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "__user",
+   "fetch_from": "grant_project.owner",
+   "fieldname": "owner",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "From Applicant",
+   "oldfieldname": "employee",
+   "oldfieldtype": "Link",
+   "options": "User",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "owner.full_name",
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "Name",
+   "oldfieldname": "employee_name",
+   "oldfieldtype": "Data",
+   "read_only": 1,
+   "width": "150px"
+  },
+  {
+   "fetch_from": "grant_project.institution",
+   "fieldname": "institution",
+   "fieldtype": "Link",
+   "label": "Administering Institution",
+   "options": "Member",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "institution.member_name",
+   "fieldname": "institution_name",
+   "fieldtype": "Read Only",
+   "label": "Institution Name"
+  },
+  {
+   "fieldname": "sb_details",
+   "fieldtype": "Section Break",
+   "label": "Details",
+   "oldfieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "grant_project.grant_application",
+   "fieldname": "grant_application",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Grant Application",
+   "options": "Grant Application",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "grant_application.grant_budget_template",
+   "fieldname": "budget_template",
+   "fieldtype": "Link",
+   "label": "Budget Template",
+   "options": "Grant Budget Template",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break",
+   "label": "Budget"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "items",
+   "oldfieldname": "expense_voucher_details",
+   "oldfieldtype": "Table",
+   "options": "Grant Budget Change Item"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "totals_section",
+   "fieldtype": "Section Break",
+   "label": "Totals"
+  },
+  {
+   "fetch_from": "grant_application.amount",
+   "fieldname": "applied_budget_amount",
+   "fieldtype": "Currency",
+   "label": "Applied Budget Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "change_in_budget_amount",
+   "fieldtype": "Currency",
+   "label": "Change in Budget Amount",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "description_sb",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "more_details",
+   "fieldtype": "Section Break",
+   "label": "More Details"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "oldfieldname": "company",
+   "oldfieldtype": "Link",
+   "options": "Company",
+   "remember_last_selected_value": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Grant Budget Change",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "icon": "fa fa-money",
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-06-11 19:18:22.726355",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Budget Change",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Member",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Portal User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Principle Investigator",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "owner, applicant_name, institution",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "timeline_field": "owner",
+ "title_field": "reason",
+ "track_changes": 1
+}
