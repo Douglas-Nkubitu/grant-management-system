@@ -1,0 +1,180 @@
+{
+ "actions": [],
+ "autoname": "GRNT-PROJ-DIS-.#####",
+ "creation": "2022-01-27 13:38:08.585120",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "grant_project",
+  "posting_date",
+  "owner",
+  "applicant_name",
+  "column_break_4",
+  "grant_application",
+  "grant_call",
+  "grant_call_name",
+  "company",
+  "section_break_7",
+  "disbursement_date",
+  "column_break_8",
+  "disbursed_amount",
+  "accounting_dimensions_section",
+  "cost_center",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "grant_project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Grant Project",
+   "options": "Grant Project",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Posting Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "grant_project.owner",
+   "fieldname": "owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Owner",
+   "options": "User",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "owner.full_name",
+   "fieldname": "applicant_name",
+   "fieldtype": "Read Only",
+   "label": "applicant_name"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "grant_project.grant_application",
+   "fieldname": "grant_application",
+   "fieldtype": "Link",
+   "label": "Grant Application",
+   "options": "Grant Application"
+  },
+  {
+   "fetch_from": "grant_project.grant_call",
+   "fieldname": "grant_call",
+   "fieldtype": "Link",
+   "label": "Grant Call",
+   "options": "Grant Call"
+  },
+  {
+   "fetch_from": "grant_project.grant_call_name",
+   "fieldname": "grant_call_name",
+   "fieldtype": "Read Only",
+   "label": "Grant Call Name"
+  },
+  {
+   "fetch_from": "against_loan.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Disbursement Details"
+  },
+  {
+   "fieldname": "disbursement_date",
+   "fieldtype": "Date",
+   "label": "Disbursement Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "disbursed_amount",
+   "fieldtype": "Currency",
+   "label": "Disbursed Amount",
+   "non_negative": 1,
+   "options": "Company:company:default_currency",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "accounting_dimensions_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Dimensions"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Grant Project Disbursement",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-06-11 19:35:57.639693",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Project Disbursement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
