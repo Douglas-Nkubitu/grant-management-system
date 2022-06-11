@@ -1,0 +1,365 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_guest_to_view": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2021-03-22 11:38:30.858790",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_break_2",
+  "type",
+  "grant_call_name",
+  "programme",
+  "national_priority_area",
+  "column_break_6",
+  "discipline",
+  "number_of_reviews_per_grant_application",
+  "donor",
+  "reporting_frequency",
+  "column_break_5",
+  "opening_date",
+  "closing_date",
+  "multiple_submission",
+  "status",
+  "is_active",
+  "company",
+  "grant_application_parameter_section",
+  "grant_application_template",
+  "grant_application_parameters",
+  "grant_reporting_parameter_details_section",
+  "grant_reporting_template",
+  "grant_reporting_parameters",
+  "grant_description_section",
+  "description",
+  "reviewers_section",
+  "review_description",
+  "contact_information_section",
+  "contact_information",
+  "section_break_18",
+  "published",
+  "route",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "GRNT-CALL-.YYYY.-",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Type",
+   "options": "Grant Type",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "grant_call_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Grant Call Name",
+   "oldfieldtype": "Data",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "fieldname": "programme",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Programme",
+   "options": "Grant Programme",
+   "reqd": 1
+  },
+  {
+   "fieldname": "national_priority_area",
+   "fieldtype": "Link",
+   "label": "National Priority Area",
+   "options": "Grant National Priority Area",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "discipline",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Discipline",
+   "options": "Grant Discipline",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "3",
+   "fetch_from": "grant_application_template.number_of_reviews_per_grant_application",
+   "fetch_if_empty": 1,
+   "fieldname": "number_of_reviews_per_grant_application",
+   "fieldtype": "Int",
+   "label": "Number of Reviews per Grant Application",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "donor",
+   "fieldtype": "Link",
+   "label": "Donor",
+   "options": "Donor"
+  },
+  {
+   "fieldname": "reporting_frequency",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Reporting Frequency",
+   "options": "\nNone\nDaily\nWeekly\nMonthly\nQuarterly\nSemiannually\nAnnually",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "opening_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Opening Date",
+   "oldfieldname": "project_start_date",
+   "oldfieldtype": "Date",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "closing_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Closing Date",
+   "oldfieldname": "completion_date",
+   "oldfieldtype": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "multiple_submission",
+   "fieldtype": "Select",
+   "label": "Multiple Submission",
+   "options": "Yes\nNo"
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "oldfieldname": "status",
+   "oldfieldtype": "Select",
+   "options": "Open\nClosed",
+   "search_index": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "is_active",
+   "fieldtype": "Select",
+   "label": "Is Active",
+   "oldfieldname": "is_active",
+   "oldfieldtype": "Select",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "remember_last_selected_value": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "grant_application_parameter_section",
+   "fieldtype": "Section Break",
+   "label": "Grant Application Parameter Details"
+  },
+  {
+   "fieldname": "grant_application_template",
+   "fieldtype": "Link",
+   "label": "Grant Application Template",
+   "options": "Grant Call Template"
+  },
+  {
+   "bold": 1,
+   "fieldname": "grant_application_parameters",
+   "fieldtype": "Table",
+   "label": "Grant Application Parameters",
+   "options": "Grant Call Application Parameter"
+  },
+  {
+   "bold": 1,
+   "fieldname": "grant_reporting_parameter_details_section",
+   "fieldtype": "Section Break",
+   "label": "Grant Reporting Parameter Details"
+  },
+  {
+   "fieldname": "grant_reporting_template",
+   "fieldtype": "Link",
+   "label": "Grant Reporting Template",
+   "options": "Grant Call Template"
+  },
+  {
+   "bold": 1,
+   "fieldname": "grant_reporting_parameters",
+   "fieldtype": "Table",
+   "label": "Grant Reporting Parameters",
+   "options": "Grant Call Report Parameter"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "grant_description_section",
+   "fieldtype": "Section Break",
+   "label": "Grant Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "reviewers_section",
+   "fieldtype": "Section Break",
+   "label": "Reviewers"
+  },
+  {
+   "fetch_from": "grant_application_template.review_description",
+   "fetch_if_empty": 1,
+   "fieldname": "review_description",
+   "fieldtype": "Small Text",
+   "label": "Review Description"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "contact_information_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
+  },
+  {
+   "fieldname": "contact_information",
+   "fieldtype": "Text Editor",
+   "label": "Contact Information"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break",
+   "label": "Website"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Show on Website"
+  },
+  {
+   "depends_on": "published",
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route",
+   "unique": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Grant Call",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "has_web_view": 1,
+ "icon": "fa fa-puzzle-piece",
+ "is_published_field": "published",
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Applications",
+   "link_doctype": "Grant Application",
+   "link_fieldname": "grant_call"
+  }
+ ],
+ "modified": "2022-06-11 18:36:58.536968",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Call",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Member",
+   "share": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All"
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Portal User",
+   "share": 1
+  }
+ ],
+ "restrict_to_domain": "Non Profit",
+ "route": "grant-calls",
+ "search_fields": "grant_call_name, programme, discipline",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "timeline_field": "programme",
+ "title_field": "grant_call_name",
+ "track_changes": 1,
+ "track_seen": 1
+}
