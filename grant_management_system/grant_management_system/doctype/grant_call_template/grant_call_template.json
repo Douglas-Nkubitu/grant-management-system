@@ -1,0 +1,160 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:title",
+ "creation": "2020-12-04 14:15:10.518139",
+ "description": "Grant Templates for various Programmes and Grant Sections",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "programme",
+  "column_break_3",
+  "template_type",
+  "disabled",
+  "section_break_7",
+  "parameters",
+  "reviewers_section",
+  "number_of_reviews_per_grant_application",
+  "column_break_10",
+  "scale_min",
+  "scale_max",
+  "column_break_13",
+  "review_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "no_copy": 1,
+   "oldfieldname": "title",
+   "oldfieldtype": "Data",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "programme",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Programme",
+   "options": "Grant Programme",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "template_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Template Type",
+   "options": "\nGrant Application\nGrant Project Reporting\nUpscaling",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Parameters"
+  },
+  {
+   "fieldname": "parameters",
+   "fieldtype": "Table",
+   "label": "Parameters",
+   "options": "Grant Call Template Parameter",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "reviewers_section",
+   "fieldtype": "Section Break",
+   "label": "Reviewers"
+  },
+  {
+   "default": "3",
+   "fieldname": "number_of_reviews_per_grant_application",
+   "fieldtype": "Int",
+   "label": "Number of Reviews per Grant Application",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scale_min",
+   "fieldtype": "Int",
+   "label": "Scale Minimum"
+  },
+  {
+   "fieldname": "scale_max",
+   "fieldtype": "Int",
+   "label": "Scale Maximum"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "review_description",
+   "fieldtype": "Small Text",
+   "label": "Review Description"
+  }
+ ],
+ "icon": "icon-legal",
+ "links": [
+  {
+   "group": "Grant Calls",
+   "link_doctype": "Grant Call",
+   "link_fieldname": "grant_application_template"
+  }
+ ],
+ "modified": "2022-06-11 19:24:26.707094",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Call Template",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "restrict_to_domain": "Non Profit",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC"
+}
