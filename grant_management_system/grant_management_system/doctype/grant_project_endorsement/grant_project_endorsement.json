@@ -1,0 +1,351 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-05-02 21:47:16.802353",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "grant_project",
+  "grant_call",
+  "applicant_name",
+  "column_break_3",
+  "endorsement_type",
+  "email_id",
+  "user",
+  "mobile_no",
+  "send_sms",
+  "column_break_9",
+  "salutation",
+  "first_name",
+  "middle_name",
+  "last_name",
+  "email_details_section",
+  "subject",
+  "column_break_18",
+  "email_template",
+  "preview",
+  "section_break_21",
+  "message",
+  "send_email",
+  "email_sent",
+  "endorsement_section_section",
+  "status",
+  "endorsement_attachment",
+  "comments",
+  "sb_more_info",
+  "company",
+  "lft",
+  "rgt",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "GRNT-PRJT-END-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "grant_project",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Grant Project",
+   "oldfieldname": "project",
+   "oldfieldtype": "Link",
+   "options": "Grant Project",
+   "read_only": 1,
+   "remember_last_selected_value": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "grant_project.grant_call",
+   "fieldname": "grant_call",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Grant Call",
+   "options": "Grant Call",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "grant_application.applicant_name",
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Applicant Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "fieldname": "endorsement_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Endorsement Type",
+   "options": "\nAdministering Institution\nCo-Applicant\nCo-Applicant Institution\nIndependent",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Endorser Email Address",
+   "options": "Email",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Endorser User ID",
+   "options": "User",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Endorser Mobile No",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "send_sms",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Send SMS"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Select a greeting for the receiver. E.g. Mr., Ms., etc.",
+   "fieldname": "salutation",
+   "fieldtype": "Link",
+   "label": "Endorser Salutation",
+   "no_copy": 1,
+   "options": "Salutation",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "Endorser First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Endorser Middle Name (Optional)"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Endorser Last Name"
+  },
+  {
+   "depends_on": "eval:!doc.__islocal",
+   "fieldname": "email_details_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Email Details"
+  },
+  {
+   "fetch_from": "email_template.subject",
+   "fetch_if_empty": 1,
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email_template",
+   "fieldtype": "Link",
+   "label": "Email Template",
+   "options": "Email Template",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "preview",
+   "fieldtype": "Button",
+   "label": "Preview Email"
+  },
+  {
+   "depends_on": "eval:!doc.__islocal",
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "hide_border": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "email_template.response",
+   "fetch_if_empty": 1,
+   "fieldname": "message",
+   "fieldtype": "Text Editor",
+   "label": "Message",
+   "print_hide": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "send_email",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Send Email"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "email_sent",
+   "fieldtype": "Check",
+   "label": "Email Sent",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "endorsement_section_section",
+   "fieldtype": "Section Break",
+   "label": "Endorsement Section"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Endorsement Status",
+   "options": "Pending\nEndorsed\nRejected"
+  },
+  {
+   "fieldname": "endorsement_attachment",
+   "fieldtype": "Attach",
+   "label": "Endorsement Attachment",
+   "mandatory_depends_on": "eval:(doc.endorsement_type=='Administering Institution' && doc.status=='Endorsed')"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Text Editor",
+   "label": "Endorsement Comments"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sb_more_info",
+   "fieldtype": "Section Break",
+   "label": "More Info"
+  },
+  {
+   "fetch_from": "project.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "remember_last_selected_value": 1
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "lft",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "rgt",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Grant Project Endorsement",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "icon": "fa fa-check",
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-06-11 19:36:45.313002",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Project Endorsement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Member",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Portal User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "grant_project, user, applicant_name",
+ "show_name_in_global_search": 1,
+ "show_preview_popup": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "timeline_field": "grant_project",
+ "track_seen": 1
+}
