@@ -1,0 +1,220 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "creation": "2017-09-21 12:02:01.206913",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "applicant_type",
+  "applicant_name",
+  "contact_person",
+  "email",
+  "column_break_5",
+  "status",
+  "website_url",
+  "company",
+  "address_contacts",
+  "address_html",
+  "column_break_9",
+  "contact_html",
+  "grant_application_details",
+  "grant_description",
+  "section_break_15",
+  "amount",
+  "has_any_past_grant_record",
+  "column_break_17",
+  "route",
+  "published",
+  "assessment_result",
+  "assessment_mark",
+  "note",
+  "column_break_24",
+  "assessment_manager",
+  "email_notification_sent",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "applicant_type",
+   "fieldtype": "Select",
+   "label": "Applicant Type",
+   "options": "Individual\nOrganization",
+   "reqd": 1
+  },
+  {
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.applicant_type=='Organization'",
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Contact Person"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nReceived\nIn Progress\nApproved\nRejected\nExpired\nWithdrawn"
+  },
+  {
+   "fieldname": "website_url",
+   "fieldtype": "Data",
+   "label": "Website URL"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "address_contacts",
+   "fieldtype": "Section Break",
+   "label": "Address and Contact",
+   "options": "fa fa-map-marker"
+  },
+  {
+   "fieldname": "address_html",
+   "fieldtype": "HTML",
+   "label": "Address HTML"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_html",
+   "fieldtype": "HTML",
+   "label": "Contact HTML"
+  },
+  {
+   "fieldname": "grant_application_details",
+   "fieldtype": "Section Break",
+   "label": "Grant Application Details "
+  },
+  {
+   "fieldname": "grant_description",
+   "fieldtype": "Long Text",
+   "label": "Grant Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Requested Amount",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "has_any_past_grant_record",
+   "fieldtype": "Check",
+   "label": "Has any past Grant Record"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Show on Website"
+  },
+  {
+   "fieldname": "assessment_result",
+   "fieldtype": "Section Break",
+   "label": "Assessment Result"
+  },
+  {
+   "fieldname": "assessment_mark",
+   "fieldtype": "Float",
+   "label": "Assessment  Mark (Out of 10)"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Small Text",
+   "label": "Note"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "assessment_manager",
+   "fieldtype": "Link",
+   "label": "Assessment  Manager",
+   "options": "User"
+  },
+  {
+   "default": "0",
+   "fieldname": "email_notification_sent",
+   "fieldtype": "Check",
+   "label": "Email Notification Sent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Grant Application",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "has_web_view": 1,
+ "is_published_field": "published",
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-06-11 18:42:25.003815",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Application",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "restrict_to_domain": "Non Profit",
+ "route": "grant-application",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "applicant_name",
+ "track_changes": 1
+}
