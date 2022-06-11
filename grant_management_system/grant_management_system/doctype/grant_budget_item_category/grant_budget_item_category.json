@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:category_name",
+ "creation": "2022-01-27 14:05:03.178658",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "category_name",
+  "column_break_2",
+  "percentage_of_total_budget",
+  "section_break_3",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "category_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Category Name",
+   "oldfieldname": "designation_name",
+   "oldfieldtype": "Data",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "percentage_of_total_budget",
+   "fieldtype": "Percent",
+   "label": "Percentage of Total Budget"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  }
+ ],
+ "icon": "fa fa-bookmark",
+ "links": [],
+ "modified": "2022-06-11 19:21:40.464327",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Budget Item Category",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC"
+}
