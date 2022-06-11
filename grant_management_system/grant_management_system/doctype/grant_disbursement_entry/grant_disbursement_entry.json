@@ -1,0 +1,253 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2021-03-08 20:27:45.294094",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "loan_type",
+  "column_break_2",
+  "posting_date",
+  "company",
+  "grant_disbursement_filters_section",
+  "grant_call",
+  "grant_call_name",
+  "column_break_222_column",
+  "institution",
+  "institution_name",
+  "column_break_9",
+  "from_date",
+  "to_date",
+  "disbursed_amount_section",
+  "disbursed_amount",
+  "grant_applications_section",
+  "get_outstanding_grant_projects",
+  "references",
+  "amount",
+  "section_break_15",
+  "notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "no_copy": 1,
+   "options": "GRNT-DISBR-.YYYY.-",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "loan_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Disbursement Type",
+   "options": "Loan Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "grant_disbursement_filters_section",
+   "fieldtype": "Section Break",
+   "label": "Grant Disbursement Filters"
+  },
+  {
+   "fieldname": "grant_call",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Grant Call",
+   "options": "Grant Call",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "grant_call.grant_call_name",
+   "fieldname": "grant_call_name",
+   "fieldtype": "Read Only",
+   "label": "Grant Call Name"
+  },
+  {
+   "fieldname": "column_break_222_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "institution",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Administering Institution",
+   "options": "Member",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "institution.member_name",
+   "fieldname": "institution_name",
+   "fieldtype": "Read Only",
+   "label": "Institution Name"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "grant_call.opening_date",
+   "fetch_if_empty": 1,
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "grant_call.closing_date",
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "disbursed_amount_section",
+   "fieldtype": "Section Break",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "disbursed_amount",
+   "fieldtype": "Currency",
+   "label": "Disbursed Amount",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:(doc.disbursed_amount)",
+   "fieldname": "grant_applications_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "depends_on": "eval:(doc.disbursed_amount && doc.docstatus==0)",
+   "fieldname": "get_outstanding_grant_projects",
+   "fieldtype": "Button",
+   "label": "Get Outstanding Grant Projects"
+  },
+  {
+   "fieldname": "references",
+   "fieldtype": "Table",
+   "label": "Disbursement References",
+   "options": "Grant Disbursement Entry Reference",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Requested Amount",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Grant Disbursement Entry",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Disbursements",
+   "link_doctype": "Loan",
+   "link_fieldname": "grant_disbursement_entry"
+  }
+ ],
+ "modified": "2022-06-11 19:27:36.643988",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Disbursement Entry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Member",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Portal User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "restrict_to_domain": "Non Profit",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "timeline_field": "institution",
+ "track_changes": 1
+}
