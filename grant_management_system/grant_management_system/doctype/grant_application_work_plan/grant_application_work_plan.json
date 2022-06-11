@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "creation": "2020-12-04 16:04:11.054988",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "key_action_steps_activities",
+  "type",
+  "expected_start_date",
+  "expected_completion_date",
+  "column_break_3",
+  "expected_output",
+  "data_source_and_evaluation_methodology",
+  "responsibility_section",
+  "person_responsible",
+  "column_break_8",
+  "institution_responsible",
+  "budget_and_comments_section",
+  "cost_budget",
+  "comments"
+ ],
+ "fields": [
+  {
+   "description": "Define each action step on its own row. Define as many action steps as necessary by adding rows to the table.",
+   "fieldname": "key_action_steps_activities",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Key Action Steps (Activities)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Task Type"
+  },
+  {
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected Start Date",
+   "reqd": 1
+  },
+  {
+   "description": "An expected completion date (month and year) must be defined for each action step.",
+   "fieldname": "expected_completion_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected Completion Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "An expected output must be defined for each action step.",
+   "fieldname": "expected_output",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Expected Output",
+   "reqd": 1
+  },
+  {
+   "fieldname": "data_source_and_evaluation_methodology",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Data Source and Evaluation Methodology",
+   "reqd": 1
+  },
+  {
+   "fieldname": "responsibility_section",
+   "fieldtype": "Section Break",
+   "label": "Responsibility"
+  },
+  {
+   "description": "A responsible person must be identified for each action step and the institution",
+   "fieldname": "person_responsible",
+   "fieldtype": "Data",
+   "label": "Person Responsible",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "institution_responsible",
+   "fieldtype": "Link",
+   "label": "Institution Responsible",
+   "options": "Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "budget_and_comments_section",
+   "fieldtype": "Section Break",
+   "label": "Budget and Comments"
+  },
+  {
+   "description": "Provide costs/budget for action steps.",
+   "fieldname": "cost_budget",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Cost Budget"
+  },
+  {
+   "description": "Comments are optional.",
+   "fieldname": "comments",
+   "fieldtype": "Text Editor",
+   "label": "Comments"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-11 19:17:39.831028",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Application Work Plan",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
