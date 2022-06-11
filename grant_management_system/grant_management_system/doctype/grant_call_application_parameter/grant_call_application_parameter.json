@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "creation": "2021-01-20 13:45:11.666188",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "parameter",
+  "section_break_2",
+  "item_description",
+  "section_break_4",
+  "maximum_score",
+  "column_break_6",
+  "required",
+  "column_break_7",
+  "is_numeric"
+ ],
+ "fields": [
+  {
+   "fieldname": "parameter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Parameter",
+   "options": "Grant Parameter",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "parameter.item_description",
+   "fetch_if_empty": 1,
+   "fieldname": "item_description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "maximum_score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Maximum Score",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "required",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Required"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_numeric",
+   "fieldtype": "Check",
+   "label": "Is Numeric",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-11 19:26:26.696945",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Call Application Parameter",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
