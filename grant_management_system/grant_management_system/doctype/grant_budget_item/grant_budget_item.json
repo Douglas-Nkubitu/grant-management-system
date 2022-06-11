@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:grant_budget_item",
+ "creation": "2021-02-24 17:24:08.935441",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "grant_budget_item",
+  "grant_budget_item_category",
+  "column_break_3",
+  "disabled",
+  "section_break_2",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "grant_budget_item",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Grant Budget Item",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "grant_budget_item_category",
+   "fieldtype": "Link",
+   "label": "Budget Category",
+   "options": "Grant Budget Item Category"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  }
+ ],
+ "icon": "icon-flag",
+ "links": [],
+ "modified": "2022-06-11 19:20:40.343625",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Budget Item",
+ "nsm_parent_field": "parent_grant_budget_item",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Non Profit Member"
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Portal User",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "ASC"
+}
