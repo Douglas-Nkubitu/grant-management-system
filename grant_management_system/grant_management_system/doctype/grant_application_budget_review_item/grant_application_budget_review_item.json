@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "creation": "2021-06-24 20:46:37.011590",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "activity",
+  "budget_item",
+  "column_break_2",
+  "rate",
+  "amount",
+  "qty",
+  "unit_of_measure",
+  "expected_start_date",
+  "expected_completion_date",
+  "column_break_6",
+  "reviewed_rate",
+  "reviewed_amount",
+  "description_section",
+  "item_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "activity",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Activity",
+   "options": "Grant Application Activity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "budget_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Budget Item",
+   "options": "Grant Budget Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate",
+   "non_negative": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Quantity",
+   "non_negative": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "Nos",
+   "fetch_if_empty": 1,
+   "fieldname": "unit_of_measure",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Unit of Measure",
+   "options": "UOM",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "label": "Expected Start Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expected_completion_date",
+   "fieldtype": "Date",
+   "label": "Expected Completion Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reviewed_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Reviewed Rate",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "reviewed_amount",
+   "fieldtype": "Currency",
+   "label": "Reviewed Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "item_description",
+   "fieldtype": "Text Editor",
+   "label": "Description",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-11 19:11:37.452373",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Application Budget Review Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
