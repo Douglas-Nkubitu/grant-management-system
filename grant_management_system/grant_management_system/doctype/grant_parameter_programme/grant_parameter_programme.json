@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "creation": "2021-01-20 17:34:52.740810",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "programme"
+ ],
+ "fields": [
+  {
+   "fieldname": "programme",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Programme",
+   "options": "Grant Programme",
+   "reqd": 1
+  }
+ ],
+ "icon": "icon-flag",
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-11 19:33:05.929507",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Parameter Programme",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "ASC"
+}
