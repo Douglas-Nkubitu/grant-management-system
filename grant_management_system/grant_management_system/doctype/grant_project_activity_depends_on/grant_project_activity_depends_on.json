@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "creation": "2022-01-17 16:16:07.626320",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "grant_project_activity",
+  "column_break_2",
+  "subject",
+  "grant_project"
+ ],
+ "fields": [
+  {
+   "fieldname": "grant_project_activity",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Grant Project Activity",
+   "options": "Grant Project Activity"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Subject",
+   "read_only": 1
+  },
+  {
+   "fieldname": "grant_project",
+   "fieldtype": "Text",
+   "label": "Grant Project",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-11 18:52:01.778383",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Grant Project Activity Depends On",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
