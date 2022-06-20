@@ -2,7 +2,7 @@
 
 A Non profit app for Grant Management
 
-Grant Management System automates the entire process of grant discovery, budget planning, proposal submission, administrative reporting and grant monitoring resulting in enhanced efficiency & better utilization of grant.
+Grant Management System automates the entire process of grant discovery, proposal submission, budget planning, administrative review, reporting and grant monitoring resulting in enhanced efficiency & better utilization of grant.
 
 ### Installation
 
