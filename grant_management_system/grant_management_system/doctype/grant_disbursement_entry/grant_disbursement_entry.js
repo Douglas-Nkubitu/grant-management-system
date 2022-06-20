@@ -3,7 +3,7 @@
 
 //selecting and adding grant application in child table
 frappe.ui.form.on('Grant Disbursement Entry', {
-
+	
 	get_grant_applications: function (frm) {
 		frappe.call({
 			method: "get_submitted_grant_applications",
@@ -32,5 +32,42 @@ frappe.ui.form.on("Grant Disbursement Entry", {
 				}
 			});
 		}
+    }
+});
+
+frappe.ui.form.on('Grant Disbursement Entry', {
+    onload: function (frm) {
+        cur_frm.set_query("institution", function () {
+            return {
+                "filters": {
+                    "membership_type": "Institution",
+                }
+            };
+        });
+    },
+    //Calculate total amount
+    validate: function (frm) {
+		// calculate total grant applications amount for each line item
+		var total = 0;
+		$.each(frm.doc.grant_applications, function (i, d) {
+			// calculate total amount            
+			total += d.amount;
+		});
+		frm.doc.amount = total;
+	}
+});
+
+frappe.ui.form.on("Grant Disbursement Entry Item",{
+        //remove value when a row is deleted
+        grant_applications_remove:function(frm, cdt, cdn) {
+    
+    	var d = locals[cdt][cdn];
+    	var total = 0;
+    	frm.doc.grant_applications.forEach(function(d) { 
+    	    // calculate total amount after row is deleted            
+			total += d.amount;
+    	});
+    	frm.set_value('amount', total);
+    	frm.refresh_field('amount');
     }
 });
