@@ -132,7 +132,7 @@
    "type": "Link"
   }
  ],
- "modified": "2022-06-20 15:20:58.981648",
+ "modified": "2022-06-22 11:01:55.005895",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant",
@@ -144,6 +144,7 @@
    "doc_view": "",
    "label": "Grant Programme",
    "link_to": "Grant Programme",
+   "restrict_to_domain": "",
    "type": "DocType"
   },
   {
@@ -228,6 +229,12 @@
    "doc_view": "",
    "label": "Grant Management Settings",
    "link_to": "Grant Management Settings",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "National R&D Indicators Survey",
+   "link_to": "National Research and Development Indicators Survey",
    "type": "DocType"
   }
  ]

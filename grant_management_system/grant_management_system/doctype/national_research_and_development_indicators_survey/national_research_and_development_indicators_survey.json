@@ -1,0 +1,267 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-12-28 11:50:14.930375",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "general_information_section",
+  "user",
+  "name1",
+  "salutation",
+  "designation",
+  "column_break_7",
+  "phone",
+  "mobile_no",
+  "email",
+  "postal_address",
+  "physical",
+  "column_break_13",
+  "parent_organizationdepartment",
+  "name_of_organizationunit",
+  "category",
+  "section_break_17",
+  "number_of_employees_involved_in_r_and_d",
+  "column_break_19",
+  "r_and_d_performed_in_kenya_during_the_last_two_financial_years",
+  "research_and_development_personnel_section_section",
+  "research_and_development_personnel",
+  "personnel_emoluments_section_section",
+  "personnel_emoluments",
+  "capital_expenditure_on_research_and_development_section_section",
+  "capital_expenditure_on_research_and_development",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "KNRDI-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "general_information_section",
+   "fieldtype": "Section Break",
+   "label": "General Information"
+  },
+  {
+   "bold": 1,
+   "default": "__user",
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "User",
+   "options": "User",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "user.full_name",
+   "fetch_if_empty": 1,
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "salutation",
+   "fieldtype": "Link",
+   "label": "Salutation",
+   "options": "Salutation"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "user.phone",
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fetch_from": "user.mobile_no",
+   "fetch_if_empty": 1,
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No",
+   "options": "Phone"
+  },
+  {
+   "fetch_from": "user.email",
+   "fetch_if_empty": 1,
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "postal_address",
+   "fieldtype": "Data",
+   "label": "Postal Address"
+  },
+  {
+   "fieldname": "physical",
+   "fieldtype": "Small Text",
+   "label": "Physical"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "parent_organizationdepartment",
+   "fieldtype": "Link",
+   "label": "Parent organization/Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "name_of_organizationunit",
+   "fieldtype": "Link",
+   "label": "Name of Organization/unit",
+   "options": "Cost Center",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "\nHigher Education\u2013Public\nHigher Education-Private\nGovernment\nBusiness Enterprises\nPrivate Non-Profit\nAbroad",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "include employees on contract for 6 months or longer",
+   "fieldname": "number_of_employees_involved_in_r_and_d",
+   "fieldtype": "Int",
+   "label": "Number of employees involved in R&D",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "In-house R&D refers to R&D performed by the reporting organization/unit on its own behalf or on behalf of the others.",
+   "fieldname": "r_and_d_performed_in_kenya_during_the_last_two_financial_years",
+   "fieldtype": "Select",
+   "label": "Did the reporting organisation/unit perform any IN-HOUSE R&D in Kenya during the last two financial years?",
+   "options": "\nYes\nNo",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.r_and_d_performed_in_kenya_during_the_last_two_financial_years == 'Yes'",
+   "description": "Report for all R&D personnel, permanent and contract (6 months or longer)",
+   "fieldname": "research_and_development_personnel_section_section",
+   "fieldtype": "Section Break",
+   "label": "Research and Development Personnel"
+  },
+  {
+   "fieldname": "research_and_development_personnel",
+   "fieldtype": "Table",
+   "label": "Research and Development Personnel",
+   "options": "Research and Development Personnel"
+  },
+  {
+   "depends_on": "eval:doc.r_and_d_performed_in_kenya_during_the_last_two_financial_years == 'Yes'",
+   "description": "INFORMATION ON R&D PERSONNEL EMOLUMENTS AND PERCENTAGE OF TIME DEVOTED TO R&D",
+   "fieldname": "personnel_emoluments_section_section",
+   "fieldtype": "Section Break",
+   "label": "Personnel Emoluments"
+  },
+  {
+   "fieldname": "personnel_emoluments",
+   "fieldtype": "Table",
+   "label": "Personnel Emoluments",
+   "options": "Personnel Emoluments"
+  },
+  {
+   "depends_on": "eval:doc.r_and_d_performed_in_kenya_during_the_last_two_financial_years == 'Yes'",
+   "description": "The full price of capital expenses must be reported in the year of purchase (do not depreciate)\nIf the assets has been/will be used for more than one activity, include only an estimate of the portion used for R&D",
+   "fieldname": "capital_expenditure_on_research_and_development_section_section",
+   "fieldtype": "Section Break",
+   "label": "Capital Expenditure on Research and Development"
+  },
+  {
+   "fieldname": "capital_expenditure_on_research_and_development",
+   "fieldtype": "Table",
+   "label": "Capital Expenditure on Research and Development",
+   "options": "Capital Expenditure on Research and Development"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "National Research and Development Indicators Survey",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-06-22 10:47:33.176010",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "National Research and Development Indicators Survey",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Member",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "knrdi-survey",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
