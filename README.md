@@ -1,6 +1,6 @@
 ## Grant Management System
 
-A Non profit app for Grant Management
+A Grant Management app for Non profit
 
 Grant Management System automates the entire process of Grant call management, Evaluation of Grant Proposals, Management of Grant Awarding, Monitoring Outcomes, Managing Closeout, and Additional functions such as Analytical reports, dashboard resulting in enhanced efficiency & better utilization of Grants.
 
