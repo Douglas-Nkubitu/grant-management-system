@@ -25,7 +25,7 @@ const search = (e) => {
     }
 
     frappe.call({
-        method: "erpnext.non_profit.doctype.grant_call.grant_call.open_search_grant",
+        method: "grant_management_system.grant_management_system.doctype.grant_call.grant_call.open_search_grant",
         args: {
             "text": input
         },
