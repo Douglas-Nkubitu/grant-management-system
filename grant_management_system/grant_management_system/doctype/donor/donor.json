@@ -82,7 +82,7 @@
    "link_fieldname": "donor"
   }
  ],
- "modified": "2022-06-23 10:10:31.203273",
+ "modified": "2022-06-23 12:07:01.819084",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Donor",
@@ -96,7 +96,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Manager",
+   "role": "GMS Manager",
    "share": 1,
    "write": 1
   }

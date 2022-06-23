@@ -139,7 +139,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-06-11 19:35:57.639693",
+ "modified": "2022-06-23 12:00:05.527018",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Project Disbursement",
@@ -168,7 +168,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Manager",
+   "role": "GMS Manager",
    "share": 1,
    "submit": 1,
    "write": 1

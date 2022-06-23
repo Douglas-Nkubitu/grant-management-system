@@ -123,7 +123,7 @@
    "link_fieldname": "grant_application_template"
   }
  ],
- "modified": "2022-06-11 19:24:26.707094",
+ "modified": "2022-06-23 12:11:43.858492",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Call Template",
@@ -148,7 +148,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Manager",
+   "role": "GMS Manager",
    "share": 1,
    "write": 1
   }

@@ -110,7 +110,7 @@
  "is_tree": 1,
  "links": [],
  "max_attachments": 3,
- "modified": "2022-06-11 19:09:05.873794",
+ "modified": "2022-06-23 12:06:33.298445",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Field of Research",
@@ -126,7 +126,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Manager",
+   "role": "GMS Manager",
    "share": 1,
    "write": 1
   }

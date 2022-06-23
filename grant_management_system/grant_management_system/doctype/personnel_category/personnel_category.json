@@ -30,7 +30,7 @@
  ],
  "icon": "fa fa-bookmark",
  "links": [],
- "modified": "2022-06-23 10:11:17.807326",
+ "modified": "2022-06-23 11:32:29.027964",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Personnel Category",
@@ -44,7 +44,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Manager",
+   "role": "GMS Manager",
    "share": 1,
    "write": 1
   }

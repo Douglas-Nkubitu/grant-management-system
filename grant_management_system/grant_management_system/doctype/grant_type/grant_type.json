@@ -45,7 +45,7 @@
  ],
  "icon": "icon-flag",
  "links": [],
- "modified": "2022-06-11 19:00:26.291878",
+ "modified": "2022-06-23 11:34:41.935913",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Type",
@@ -69,7 +69,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Manager",
+   "role": "GMS Manager",
    "share": 1,
    "write": 1
   },
@@ -84,7 +84,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Portal User",
+   "role": "GMS Portal User",
    "share": 1,
    "write": 1
   },
@@ -95,11 +95,12 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Member",
+   "role": "GMS Member",
    "share": 1,
    "write": 1
   }
  ],
  "sort_field": "modified",
- "sort_order": "ASC"
+ "sort_order": "ASC",
+ "track_changes": 1
 }

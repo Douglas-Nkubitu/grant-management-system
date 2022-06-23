@@ -192,7 +192,7 @@
  "is_published_field": "published",
  "is_submittable": 1,
  "links": [],
- "modified": "2022-06-11 18:42:25.003815",
+ "modified": "2022-06-23 12:06:04.278583",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Application",
@@ -206,7 +206,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Manager",
+   "role": "GMS Manager",
    "share": 1,
    "write": 1
   }

@@ -55,7 +55,7 @@
  ],
  "icon": "icon-flag",
  "links": [],
- "modified": "2022-06-11 18:59:16.747684",
+ "modified": "2022-06-23 12:06:19.159713",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Activity Type",
@@ -79,7 +79,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Manager",
+   "role": "GMS Manager",
    "share": 1,
    "write": 1
   },
@@ -94,7 +94,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Portal User",
+   "role": "GMS Portal User",
    "share": 1,
    "write": 1
   },
@@ -105,7 +105,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Member",
+   "role": "GMS Member",
    "share": 1,
    "write": 1
   }

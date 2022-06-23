@@ -151,7 +151,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2022-06-11 19:59:57.987305",
+ "modified": "2022-06-23 11:33:50.420537",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Membership Settings",
@@ -173,7 +173,7 @@
    "email": 1,
    "print": 1,
    "read": 1,
-   "role": "Non Profit Manager",
+   "role": "GMS Manager",
    "share": 1,
    "write": 1
   },
@@ -181,7 +181,7 @@
    "email": 1,
    "print": 1,
    "read": 1,
-   "role": "Non Profit Member",
+   "role": "GMS Member",
    "share": 1
   }
  ],

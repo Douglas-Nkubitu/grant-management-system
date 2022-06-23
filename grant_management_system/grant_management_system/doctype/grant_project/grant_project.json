@@ -415,7 +415,7 @@
   }
  ],
  "max_attachments": 4,
- "modified": "2022-06-11 18:56:06.685304",
+ "modified": "2022-06-23 11:38:30.155513",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Project",
@@ -428,7 +428,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Manager",
+   "role": "GMS Manager",
    "share": 1,
    "write": 1
   },
@@ -445,7 +445,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Member",
+   "role": "GMS Member",
    "share": 1,
    "write": 1
   },
@@ -467,7 +467,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Portal User",
+   "role": "GMS Portal User",
    "share": 1,
    "write": 1
   }

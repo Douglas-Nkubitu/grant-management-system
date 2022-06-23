@@ -307,7 +307,7 @@
    "link_fieldname": "grant_call"
   }
  ],
- "modified": "2022-06-22 11:02:52.115072",
+ "modified": "2022-06-23 12:09:36.696753",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Call",
@@ -318,7 +318,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Member",
+   "role": "GMS Member",
    "share": 1
   },
   {
@@ -337,7 +337,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Manager",
+   "role": "GMS Manager",
    "share": 1,
    "submit": 1,
    "write": 1
@@ -348,7 +348,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Portal User",
+   "role": "GMS Portal User",
    "share": 1
   }
  ],

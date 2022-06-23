@@ -232,7 +232,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2022-06-11 20:06:10.708392",
+ "modified": "2022-06-23 11:32:44.171292",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Non Profit Settings",
@@ -254,7 +254,7 @@
    "email": 1,
    "print": 1,
    "read": 1,
-   "role": "Non Profit Manager",
+   "role": "GMS Manager",
    "share": 1,
    "write": 1
   },
@@ -262,7 +262,7 @@
    "email": 1,
    "print": 1,
    "read": 1,
-   "role": "Non Profit Member",
+   "role": "GMS Member",
    "share": 1
   }
  ],

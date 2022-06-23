@@ -151,7 +151,7 @@
  ],
  "issingle": 1,
  "links": [],
- "modified": "2022-06-11 19:30:47.181686",
+ "modified": "2022-06-23 11:58:02.831911",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Management Settings",
@@ -172,7 +172,7 @@
    "email": 1,
    "print": 1,
    "read": 1,
-   "role": "Non Profit Manager",
+   "role": "GMS Manager",
    "share": 1,
    "write": 1
   },
@@ -187,14 +187,14 @@
    "email": 1,
    "print": 1,
    "read": 1,
-   "role": "Non Profit Member",
+   "role": "GMS Member",
    "share": 1
   },
   {
    "email": 1,
    "print": 1,
    "read": 1,
-   "role": "Non Profit Portal User",
+   "role": "GMS Portal User",
    "share": 1
   }
  ],

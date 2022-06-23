@@ -89,7 +89,7 @@
  "has_web_view": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2022-06-23 10:09:33.768876",
+ "modified": "2022-06-23 12:13:59.742059",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Chapter",
@@ -104,7 +104,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Manager",
+   "role": "GMS Manager",
    "share": 1,
    "write": 1
   }

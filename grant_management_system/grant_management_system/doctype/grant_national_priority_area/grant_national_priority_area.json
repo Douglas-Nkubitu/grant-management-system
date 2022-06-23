@@ -43,7 +43,7 @@
   }
  ],
  "links": [],
- "modified": "2022-06-11 19:31:36.137011",
+ "modified": "2022-06-23 11:57:47.733395",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant National Priority Area",
@@ -69,7 +69,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Manager",
+   "role": "GMS Manager",
    "share": 1,
    "write": 1
   }

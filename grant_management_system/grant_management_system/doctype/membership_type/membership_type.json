@@ -44,7 +44,7 @@
   }
  ],
  "links": [],
- "modified": "2022-06-11 20:02:17.594523",
+ "modified": "2022-06-23 11:33:33.801883",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Membership Type",
@@ -58,7 +58,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Manager",
+   "role": "GMS Manager",
    "share": 1,
    "write": 1
   }

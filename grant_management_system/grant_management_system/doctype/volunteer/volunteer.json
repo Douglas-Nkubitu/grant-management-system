@@ -120,7 +120,7 @@
  ],
  "image_field": "image",
  "links": [],
- "modified": "2022-06-23 10:30:54.169037",
+ "modified": "2022-06-23 11:31:35.681061",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Volunteer",
@@ -134,7 +134,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Manager",
+   "role": "GMS Manager",
    "share": 1,
    "write": 1
   }

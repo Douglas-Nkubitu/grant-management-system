@@ -203,7 +203,7 @@
  "icon": "fa fa-money",
  "is_submittable": 1,
  "links": [],
- "modified": "2022-06-11 19:18:22.726355",
+ "modified": "2022-06-23 12:01:36.445778",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Budget Change",
@@ -217,7 +217,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Manager",
+   "role": "GMS Manager",
    "share": 1,
    "submit": 1,
    "write": 1
@@ -229,7 +229,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Member",
+   "role": "GMS Member",
    "share": 1,
    "submit": 1,
    "write": 1
@@ -241,7 +241,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Portal User",
+   "role": "GMS Portal User",
    "share": 1,
    "submit": 1,
    "write": 1

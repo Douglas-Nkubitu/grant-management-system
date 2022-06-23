@@ -291,7 +291,7 @@
  "icon": "fa fa-check",
  "is_submittable": 1,
  "links": [],
- "modified": "2022-06-11 19:12:45.796012",
+ "modified": "2022-06-23 12:04:31.201414",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Application Endorsement",
@@ -303,7 +303,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Manager",
+   "role": "GMS Manager",
    "share": 1,
    "write": 1
   },
@@ -314,7 +314,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Member",
+   "role": "GMS Member",
    "share": 1,
    "write": 1
   },
@@ -325,7 +325,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Portal User",
+   "role": "GMS Portal User",
    "share": 1,
    "write": 1
   },

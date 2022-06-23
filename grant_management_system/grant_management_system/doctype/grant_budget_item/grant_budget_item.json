@@ -52,7 +52,7 @@
  ],
  "icon": "icon-flag",
  "links": [],
- "modified": "2022-06-11 19:20:40.343625",
+ "modified": "2022-06-23 12:01:15.646803",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Budget Item",
@@ -78,13 +78,13 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Manager",
+   "role": "GMS Manager",
    "share": 1,
    "write": 1
   },
   {
    "read": 1,
-   "role": "Non Profit Member"
+   "role": "GMS Member"
   },
   {
    "email": 1,
@@ -92,7 +92,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Non Profit Portal User",
+   "role": "GMS Portal User",
    "share": 1
   }
  ],
