@@ -81,17 +81,21 @@
  ],
  "fields": [
   {
+   "default": "Individual",
    "fieldname": "applicant_type",
    "fieldtype": "Select",
+   "hidden": 1,
    "label": "Applicant Type",
    "options": "Individual\nOrganization",
    "reqd": 1
   },
   {
+   "fetch_from": "applicant.full_name",
    "fieldname": "applicant_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Name",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -101,10 +105,12 @@
    "label": "Contact Person"
   },
   {
+   "fetch_from": "applicant.email",
    "fieldname": "email",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Email",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -146,9 +152,12 @@
    "label": "Contact HTML"
   },
   {
+   "collapsible": 1,
    "fieldname": "grant_application_details",
    "fieldtype": "Section Break",
-   "label": "Grant Application Details "
+   "hidden": 1,
+   "label": "Grant Application Details ",
+   "report_hide": 1
   },
   {
    "fieldname": "grant_description",
@@ -161,9 +170,12 @@
    "fieldtype": "Section Break"
   },
   {
+   "bold": 1,
+   "default": "0",
    "fieldname": "amount",
    "fieldtype": "Currency",
    "label": "Requested Amount",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -175,23 +187,31 @@
   {
    "fieldname": "route",
    "fieldtype": "Data",
-   "label": "Route"
+   "hidden": 1,
+   "label": "Route",
+   "print_hide": 1,
+   "report_hide": 1
   },
   {
-   "default": "0",
+   "default": "1",
    "fieldname": "published",
    "fieldtype": "Check",
-   "label": "Show on Website"
+   "hidden": 1,
+   "label": "Show on Website",
+   "print_hide": 1,
+   "report_hide": 1
   },
   {
    "fieldname": "assessment_result",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Assessment Result"
   },
   {
    "fieldname": "assessment_mark",
    "fieldtype": "Float",
-   "label": "Assessment  Mark (Out of 10)"
+   "label": "Assessment  Mark (Out of 10)",
+   "print_hide": 1
   },
   {
    "fieldname": "note",
@@ -281,12 +301,12 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "date",
    "fieldtype": "Date",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Date",
-   "options": "Today",
    "reqd": 1
   },
   {
@@ -318,6 +338,7 @@
    "read_only": 1
   },
   {
+   "fetch_from": "grant_call.type",
    "fetch_if_empty": 1,
    "fieldname": "type",
    "fieldtype": "Link",
@@ -338,6 +359,7 @@
    "reqd": 1
   },
   {
+   "fetch_from": "grant_call.discipline",
    "fieldname": "discipline",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -494,6 +516,7 @@
    "read_only": 1
   },
   {
+   "collapsible": 1,
    "fieldname": "references_section",
    "fieldtype": "Section Break",
    "label": "References"
@@ -569,7 +592,7 @@
    "link_fieldname": "grant_application"
   }
  ],
- "modified": "2022-06-23 15:03:36.722730",
+ "modified": "2022-06-23 15:38:57.562422",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Application",
