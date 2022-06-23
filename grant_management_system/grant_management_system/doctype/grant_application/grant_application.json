@@ -443,7 +443,6 @@
    "description": "Provide a clearly Itemized and realistic budget in the template below. Detailed notes on each budget item should be provided in the description area.\n\nYou can delete or add rows as needed.",
    "fieldname": "budget_items",
    "fieldtype": "Section Break",
-   "hidden": 1,
    "label": "Budget"
   },
   {
@@ -592,7 +591,7 @@
    "link_fieldname": "grant_application"
   }
  ],
- "modified": "2022-06-23 15:38:57.562422",
+ "modified": "2022-06-23 15:53:29.495653",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Application",
