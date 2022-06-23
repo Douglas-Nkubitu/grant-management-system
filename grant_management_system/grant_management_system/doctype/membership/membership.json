@@ -151,7 +151,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-06-23 11:34:04.883060",
+ "modified": "2022-06-23 12:50:38.329700",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Membership",
@@ -182,7 +182,6 @@
    "write": 1
   }
  ],
- "restrict_to_domain": "Non Profit",
  "search_fields": "member, member_name",
  "sort_field": "modified",
  "sort_order": "DESC",

@@ -192,7 +192,7 @@
  "is_published_field": "published",
  "is_submittable": 1,
  "links": [],
- "modified": "2022-06-23 12:06:04.278583",
+ "modified": "2022-06-23 13:01:35.857631",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Application",
@@ -211,7 +211,6 @@
    "write": 1
   }
  ],
- "restrict_to_domain": "Non Profit",
  "route": "grant-application",
  "sort_field": "modified",
  "sort_order": "DESC",

@@ -307,7 +307,7 @@
    "link_fieldname": "grant_call"
   }
  ],
- "modified": "2022-06-23 12:09:36.696753",
+ "modified": "2022-06-23 12:46:47.624169",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Call",
@@ -352,7 +352,6 @@
    "share": 1
   }
  ],
- "restrict_to_domain": "Non Profit",
  "route": "grant-calls",
  "search_fields": "grant_call_name, programme, discipline",
  "show_name_in_global_search": 1,

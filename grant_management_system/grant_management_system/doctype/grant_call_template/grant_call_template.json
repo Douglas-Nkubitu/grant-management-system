@@ -123,7 +123,7 @@
    "link_fieldname": "grant_application_template"
   }
  ],
- "modified": "2022-06-23 12:11:43.858492",
+ "modified": "2022-06-23 12:56:15.771226",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Call Template",
@@ -153,7 +153,6 @@
    "write": 1
   }
  ],
- "restrict_to_domain": "Non Profit",
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "ASC"

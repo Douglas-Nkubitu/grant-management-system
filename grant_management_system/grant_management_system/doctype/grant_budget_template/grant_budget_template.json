@@ -86,7 +86,7 @@
  "icon": "icon-legal",
  "is_submittable": 1,
  "links": [],
- "modified": "2022-06-23 12:12:07.570950",
+ "modified": "2022-06-23 12:57:12.570935",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Budget Template",
@@ -116,7 +116,6 @@
    "write": 1
   }
  ],
- "restrict_to_domain": "Non Profit",
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "ASC"

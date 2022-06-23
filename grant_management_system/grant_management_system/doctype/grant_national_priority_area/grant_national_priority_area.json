@@ -43,7 +43,7 @@
   }
  ],
  "links": [],
- "modified": "2022-06-23 11:57:47.733395",
+ "modified": "2022-06-23 12:54:47.671054",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant National Priority Area",
@@ -74,7 +74,6 @@
    "write": 1
   }
  ],
- "restrict_to_domain": "Non Profit",
  "sort_field": "modified",
  "sort_order": "DESC",
  "track_changes": 1

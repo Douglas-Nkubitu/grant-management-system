@@ -82,7 +82,7 @@
    "link_fieldname": "donor"
   }
  ],
- "modified": "2022-06-23 12:07:01.819084",
+ "modified": "2022-06-23 13:02:15.740135",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Donor",
@@ -102,7 +102,6 @@
   }
  ],
  "quick_entry": 1,
- "restrict_to_domain": "Non Profit",
  "sort_field": "modified",
  "sort_order": "DESC",
  "title_field": "donor_name",
