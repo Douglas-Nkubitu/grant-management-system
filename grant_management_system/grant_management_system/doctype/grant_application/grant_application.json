@@ -1,37 +1,82 @@
 {
  "actions": [],
  "allow_guest_to_view": 1,
- "creation": "2017-09-21 12:02:01.206913",
+ "autoname": "naming_series:",
+ "creation": "2022-06-23 14:02:13.295237",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "naming_series",
   "applicant_type",
+  "applicant",
   "applicant_name",
   "contact_person",
   "email",
   "column_break_5",
+  "project_type",
+  "institution",
+  "institution_name",
+  "gender",
+  "column_break_12",
+  "date",
   "status",
   "website_url",
   "company",
+  "grant_details",
+  "grant_call",
+  "details",
+  "grant_call_details_section",
+  "type",
+  "programme",
+  "discipline",
+  "column_break_24",
+  "national_priority_area",
+  "reporting_frequency",
+  "grant_call_name",
   "address_contacts",
   "address_html",
-  "column_break_9",
+  "column_break_27",
   "contact_html",
   "grant_application_details",
   "grant_description",
+  "work_plan_section",
+  "grant_application_work_plan",
+  "total_cost_budget",
+  "logical_frame_work_section",
+  "grant_application_logical_frame_work",
+  "budget_items",
+  "grant_budget_template",
+  "grant_application_budget_item",
   "section_break_15",
   "amount",
   "has_any_past_grant_record",
-  "column_break_17",
+  "column_break_34",
+  "average_review_score",
+  "column_break_47",
+  "average_reviewed_budget_amount",
+  "column_break_49",
   "route",
   "published",
+  "deduction_items_section",
+  "grant_application_deduction_items",
+  "total_deduction_items_amount",
+  "other_sources_of_fund_section",
+  "grant_application_other_sources_of_fund",
+  "total_other_sources_of_fund_amount",
+  "references_section",
+  "grant_application_reference",
+  "list_of_appendices_section",
+  "grant_application_list_of_appendices",
   "assessment_result",
   "assessment_mark",
   "note",
-  "column_break_24",
+  "column_break_40",
   "assessment_manager",
   "email_notification_sent",
+  "more_info",
+  "project",
+  "grant_project",
   "amended_from"
  ],
  "fields": [
@@ -96,10 +141,6 @@
    "label": "Address HTML"
   },
   {
-   "fieldname": "column_break_9",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "contact_html",
    "fieldtype": "HTML",
    "label": "Contact HTML"
@@ -130,10 +171,6 @@
    "fieldname": "has_any_past_grant_record",
    "fieldtype": "Check",
    "label": "Has any past Grant Record"
-  },
-  {
-   "fieldname": "column_break_17",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "route",
@@ -186,13 +223,353 @@
    "options": "Grant Application",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "GRNT-APP-.YYYY.-",
+   "reqd": 1,
+   "translatable": 1
+  },
+  {
+   "bold": 1,
+   "default": "__user",
+   "fieldname": "applicant",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Applicant",
+   "options": "User",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "project_type",
+   "fieldtype": "Select",
+   "label": "Project Type",
+   "options": "\nApplied\nBasic Research",
+   "translatable": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "fieldname": "institution",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Administering Institution",
+   "options": "Member",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "institution.member_name",
+   "fieldname": "institution_name",
+   "fieldtype": "Read Only",
+   "label": "Institution Name"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Gender",
+   "options": "Gender",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "options": "Today",
+   "reqd": 1
+  },
+  {
+   "fieldname": "grant_details",
+   "fieldtype": "Section Break",
+   "label": "Grant Application Details"
+  },
+  {
+   "bold": 1,
+   "fieldname": "grant_call",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Grant Call",
+   "options": "Grant Call",
+   "reqd": 1
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Table",
+   "label": "Application Details",
+   "options": "Grant Application Parameter",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "grant_call_details_section",
+   "fieldtype": "Section Break",
+   "label": "Grant Call Details",
+   "read_only": 1
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Type",
+   "options": "Grant Type",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "grant_call.programme",
+   "fieldname": "programme",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Programme",
+   "options": "Grant Programme",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "discipline",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Discipline",
+   "options": "Grant Discipline",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_40",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "grant_call.national_priority_area",
+   "fieldname": "national_priority_area",
+   "fieldtype": "Link",
+   "label": "National Priority Area",
+   "options": "Grant National Priority Area",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "grant_call.reporting_frequency",
+   "fieldname": "reporting_frequency",
+   "fieldtype": "Select",
+   "label": "Reporting Frequency",
+   "options": "\nNone\nDaily\nWeekly\nMonthly\nQuarterly\nSemiannually\nAnnually",
+   "read_only": 1,
+   "translatable": 1
+  },
+  {
+   "fetch_from": "grant_call.grant_call_name",
+   "fieldname": "grant_call_name",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Grant Call Name"
+  },
+  {
+   "collapsible": 1,
+   "description": "Provide a clear project activities work plan in the template below.",
+   "fieldname": "work_plan_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Work Plan"
+  },
+  {
+   "fieldname": "grant_application_work_plan",
+   "fieldtype": "Table",
+   "label": "Grant Application Work Plan",
+   "options": "Grant Application Work Plan"
+  },
+  {
+   "fieldname": "total_cost_budget",
+   "fieldtype": "Currency",
+   "label": "Total Cost Budget",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "description": "Provide information in the template below",
+   "fieldname": "logical_frame_work_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Logical Frame Work"
+  },
+  {
+   "fieldname": "grant_application_logical_frame_work",
+   "fieldtype": "Table",
+   "label": "Grant Application Logical Frame Work",
+   "options": "Grant Application Logical Frame Work"
+  },
+  {
+   "description": "Provide a clearly Itemized and realistic budget in the template below. Detailed notes on each budget item should be provided in the description area.\n\nYou can delete or add rows as needed.",
+   "fieldname": "budget_items",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Budget"
+  },
+  {
+   "fieldname": "grant_budget_template",
+   "fieldtype": "Link",
+   "label": "Budget Template",
+   "options": "Grant Budget Template"
+  },
+  {
+   "fieldname": "grant_application_budget_item",
+   "fieldtype": "Table",
+   "label": "Grant Application Budget Item",
+   "options": "Grant Application Budget Item"
+  },
+  {
+   "fieldname": "average_review_score",
+   "fieldtype": "Float",
+   "label": "Average Review Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_47",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "average_reviewed_budget_amount",
+   "fieldtype": "Currency",
+   "label": "Average Reviewed Budget Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_49",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "deduction_items_section",
+   "fieldtype": "Section Break",
+   "label": "Deduction Items"
+  },
+  {
+   "fieldname": "grant_application_deduction_items",
+   "fieldtype": "Table",
+   "label": "Grant Application Deduction Items",
+   "options": "Grant Application Deduction Items"
+  },
+  {
+   "fieldname": "total_deduction_items_amount",
+   "fieldtype": "Currency",
+   "label": "Total Deduction Items Amount",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "description": "List any other FUNDS that you or your institution have obtained from other sources for this project.",
+   "fieldname": "other_sources_of_fund_section",
+   "fieldtype": "Section Break",
+   "label": "Other Sources of Fund"
+  },
+  {
+   "fieldname": "grant_application_other_sources_of_fund",
+   "fieldtype": "Table",
+   "label": "Grant Application Other Sources of Fund",
+   "options": "Grant Application Other Sources of Fund"
+  },
+  {
+   "fieldname": "total_other_sources_of_fund_amount",
+   "fieldtype": "Currency",
+   "label": "Total Other Sources of Fund Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "references_section",
+   "fieldtype": "Section Break",
+   "label": "References"
+  },
+  {
+   "fieldname": "grant_application_reference",
+   "fieldtype": "Table",
+   "label": "Grant Application Reference",
+   "options": "Grant Application Reference"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "list_of_appendices_section",
+   "fieldtype": "Section Break",
+   "label": "List of Appendices"
+  },
+  {
+   "fieldname": "grant_application_list_of_appendices",
+   "fieldtype": "Table",
+   "label": "Grant Application List of Appendices",
+   "options": "Grant Application List of Appendices"
+  },
+  {
+   "collapsible": 1,
+   "collapsible_depends_on": "project",
+   "fieldname": "more_info",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "More information",
+   "options": "fa fa-file-text",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "grant_project",
+   "fieldtype": "Link",
+   "label": "Grant Project",
+   "options": "Grant Project"
   }
  ],
  "has_web_view": 1,
  "is_published_field": "published",
  "is_submittable": 1,
- "links": [],
- "modified": "2022-06-23 13:01:35.857631",
+ "links": [
+  {
+   "group": "Application Reviews",
+   "link_doctype": "Grant Application Review",
+   "link_fieldname": "grant_application"
+  },
+  {
+   "group": "Budget Reviews",
+   "link_doctype": "Grant Application Budget Review",
+   "link_fieldname": "grant_application"
+  },
+  {
+   "group": "Projects",
+   "link_doctype": "Grant Project",
+   "link_fieldname": "grant_application"
+  },
+  {
+   "group": "Workplan Activities",
+   "link_doctype": "Grant Application Activity",
+   "link_fieldname": "grant_application"
+  },
+  {
+   "group": "Endorsements",
+   "link_doctype": "Grant Application Endorsement",
+   "link_fieldname": "grant_application"
+  }
+ ],
+ "modified": "2022-06-23 15:03:36.722730",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Application",
