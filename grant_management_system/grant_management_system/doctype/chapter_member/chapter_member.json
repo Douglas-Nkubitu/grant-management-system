@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "creation": "2017-09-14 13:38:04.296375",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user",
+  "introduction",
+  "website_url",
+  "enabled",
+  "leave_reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "introduction",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Introduction"
+  },
+  {
+   "fieldname": "website_url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Website URL"
+  },
+  {
+   "columns": 2,
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "leave_reason",
+   "fieldtype": "Data",
+   "label": "Leave Reason"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-23 10:09:51.315865",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Chapter Member",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "restrict_to_domain": "Non Profit",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "autoname": "NPO-CAPP-.YYYY.-.#####",
+ "creation": "2018-06-08 16:12:42.091729",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name_of_applicant",
+  "email",
+  "column_break_1",
+  "certification_status",
+  "payment_details",
+  "paid",
+  "currency",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "name_of_applicant",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name of Applicant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Email",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "certification_status",
+   "fieldtype": "Select",
+   "label": "Certification Status",
+   "options": "Yet to appear\nCertified\nNot Certified"
+  },
+  {
+   "fieldname": "payment_details",
+   "fieldtype": "Section Break",
+   "label": "Payment Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "paid",
+   "fieldtype": "Check",
+   "label": "Paid"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Select",
+   "label": "Currency",
+   "options": "USD\nINR"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Float",
+   "label": "Amount"
+  }
+ ],
+ "links": [],
+ "modified": "2022-06-23 10:09:14.826323",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Certification Application",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "restrict_to_domain": "Non Profit",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

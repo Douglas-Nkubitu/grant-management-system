@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2017-09-14 13:36:03.904702",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "chapter_head",
+  "column_break_3",
+  "region",
+  "section_break_5",
+  "introduction",
+  "meetup_embed_html",
+  "address",
+  "route",
+  "published",
+  "chapter_members",
+  "members"
+ ],
+ "fields": [
+  {
+   "fieldname": "chapter_head",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Chapter Head",
+   "options": "Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Data",
+   "label": "Region",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "introduction",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Introduction",
+   "reqd": 1
+  },
+  {
+   "fieldname": "meetup_embed_html",
+   "fieldtype": "Code",
+   "label": "Meetup Embed HTML"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Text",
+   "label": "Address"
+  },
+  {
+   "description": "chapters/chapter_name\nleave blank automatically set after saving chapter.",
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "chapter_members",
+   "fieldtype": "Section Break",
+   "label": "Chapter Members"
+  },
+  {
+   "fieldname": "members",
+   "fieldtype": "Table",
+   "label": "Members",
+   "options": "Chapter Member"
+  }
+ ],
+ "has_web_view": 1,
+ "is_published_field": "published",
+ "links": [],
+ "modified": "2022-06-23 10:09:33.768876",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Chapter",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "restrict_to_domain": "Non Profit",
+ "route": "chapters",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
