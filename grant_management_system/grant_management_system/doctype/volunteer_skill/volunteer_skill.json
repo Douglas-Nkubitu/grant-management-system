@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "creation": "2017-09-20 15:26:26.453435",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "volunteer_skill"
+ ],
+ "fields": [
+  {
+   "fieldname": "volunteer_skill",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Volunteer Skill"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-23 10:31:46.052671",
+ "modified_by": "Administrator",
+ "module": "Grant Management System",
+ "name": "Volunteer Skill",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "restrict_to_domain": "Non Profit",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
