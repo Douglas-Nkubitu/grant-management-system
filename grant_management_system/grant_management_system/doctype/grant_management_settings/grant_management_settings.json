@@ -146,7 +146,7 @@
   },
   {
    "default": "Search for Grant Call ...",
-   "depends_on": "show_search",
+   "depends_on": "eval: doc.show_search",
    "fieldname": "search_placeholder",
    "fieldtype": "Data",
    "label": "Search Field Placeholder"
@@ -154,7 +154,7 @@
  ],
  "issingle": 1,
  "links": [],
- "modified": "2022-06-23 23:00:30.978163",
+ "modified": "2022-06-23 23:23:59.688817",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Management Settings",
