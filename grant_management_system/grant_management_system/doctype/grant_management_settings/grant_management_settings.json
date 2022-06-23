@@ -104,6 +104,7 @@
    "label": "Closed Grant Call Portal Title"
   },
   {
+   "default": "No Open Grant Calls! Thank You",
    "depends_on": "eval: doc.enable_gms_portal",
    "fieldname": "no_open_grant_call",
    "fieldtype": "Data",
@@ -143,6 +144,7 @@
    "label": "Show Search on Website"
   },
   {
+   "default": "Search for Grant Call ...",
    "depends_on": "show_search",
    "fieldname": "search_placeholder",
    "fieldtype": "Data",
@@ -151,7 +153,7 @@
  ],
  "issingle": 1,
  "links": [],
- "modified": "2022-06-23 12:55:07.607250",
+ "modified": "2022-06-23 22:56:55.414966",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Management Settings",
