@@ -29,6 +29,7 @@
  ],
  "fields": [
   {
+   "default": "Principle Investigator",
    "fieldname": "default_principal_investigator_module_profile",
    "fieldtype": "Link",
    "label": "Default Principal Investigator Module Profile",
@@ -153,7 +154,7 @@
  ],
  "issingle": 1,
  "links": [],
- "modified": "2022-06-23 22:56:55.414966",
+ "modified": "2022-06-23 23:00:30.978163",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Management Settings",
