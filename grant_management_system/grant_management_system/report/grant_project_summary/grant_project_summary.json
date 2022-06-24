@@ -10,7 +10,7 @@
  "idx": 0,
  "is_standard": "Yes",
  "letter_head": "Standard",
- "modified": "2022-06-20 15:24:03.336599",
+ "modified": "2022-06-24 12:38:02.725439",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Project Summary",
@@ -21,7 +21,10 @@
  "report_type": "Script Report",
  "roles": [
   {
-   "role": "Non Profit Manager"
+   "role": "System Manager"
+  },
+  {
+   "role": "GMS Manager"
   }
  ]
 }
