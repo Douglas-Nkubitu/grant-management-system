@@ -67,6 +67,55 @@
    "link_to": "Grant Application",
    "link_type": "DocType",
    "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Grant Project",
+   "link_to": "Grant Project",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Grant Application Activity",
+   "link_to": "Grant Application Activity",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Grant Application Review",
+   "link_to": "Grant Application Review",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Grant Application Endorsement",
+   "link_to": "Grant Application Endorsement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Grant Application Budget Review",
+   "link_to": "Grant Application Budget Review",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
    "type": "Link"
   },
   {
@@ -85,6 +134,7 @@
    "link_to": "Member",
    "link_type": "DocType",
    "onboard": 0,
+   "only_for": "",
    "type": "Link"
   },
   {
@@ -94,6 +144,7 @@
    "link_to": "Membership",
    "link_type": "DocType",
    "onboard": 0,
+   "only_for": "",
    "type": "Link"
   },
   {
@@ -103,15 +154,17 @@
    "link_to": "Membership Type",
    "link_type": "DocType",
    "onboard": 0,
+   "only_for": "",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Membership Settings",
+   "label": "Non Profit Settings",
    "link_to": "Non Profit Settings",
    "link_type": "DocType",
    "onboard": 0,
+   "only_for": "",
    "type": "Link"
   },
   {
@@ -120,6 +173,7 @@
    "label": "Volunteer",
    "link_type": "DocType",
    "onboard": 0,
+   "only_for": "",
    "type": "Card Break"
   },
   {
@@ -129,6 +183,17 @@
    "link_to": "Volunteer",
    "link_type": "DocType",
    "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Volunteer Type",
+   "link_to": "Volunteer Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
    "type": "Link"
   },
   {
@@ -137,6 +202,7 @@
    "label": "Custom Report",
    "link_type": "DocType",
    "onboard": 0,
+   "only_for": "",
    "type": "Card Break"
   },
   {
@@ -146,6 +212,7 @@
    "link_to": "Grant Project Summary",
    "link_type": "Report",
    "onboard": 0,
+   "only_for": "",
    "type": "Link"
   },
   {
@@ -173,10 +240,11 @@
    "link_to": "Grant Application Budget Review Analytics",
    "link_type": "Report",
    "onboard": 0,
+   "only_for": "",
    "type": "Link"
   }
  ],
- "modified": "2022-06-23 09:50:38.283630",
+ "modified": "2022-06-24 13:25:59.007963",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant",
@@ -225,18 +293,6 @@
    "doc_view": "",
    "label": "Grant Application",
    "link_to": "Grant Application",
-   "type": "DocType"
-  },
-  {
-   "doc_view": "",
-   "label": "Member",
-   "link_to": "Member",
-   "type": "DocType"
-  },
-  {
-   "doc_view": "",
-   "label": "Membership",
-   "link_to": "Membership",
    "type": "DocType"
   },
   {

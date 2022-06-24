@@ -4,7 +4,6 @@
 
 frappe.query_reports["Grant Project Summary"] = {
 	"filters": [
-
 		{
 			"fieldname": "company",
 			"label": __("Company"),
