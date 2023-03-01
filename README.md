@@ -11,7 +11,7 @@ Using bench, [install ERPNext](https://github.com/frappe/bench#installation) as 
 Once ERPNext is installed, add grant-management-system app to your bench by running
 
 ```sh
-$ bench get-app https://github.com/navariltd/grant-management-system.git
+$ bench get-app https://github.com/Douglas-Nkubitu/grant-management-system.git
 ```
 
 After that, you can install grant-management-system app on required site by running
