@@ -2,14 +2,9 @@
 # For license information, please see license.txt
 
 import frappe
-from email_reply_parser import EmailReplyParser
 from frappe import _
-from frappe.desk.reportview import get_match_cond
 from frappe.model.document import Document
-from frappe.utils import add_days, flt, get_datetime, get_time, get_url, nowtime, today
-
-from erpnext.controllers.queries import get_filters_cond
-from hrms.hr.doctype.holiday_list.holiday_list import is_holiday
+from frappe.utils import today
 
 class GrantProject(Document):
 	def validate(self):
