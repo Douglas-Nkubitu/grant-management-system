@@ -1,42 +1,32 @@
 {
- "category": "Modules",
  "charts": [],
- "creation": "2022-06-20 15:08:50.759077",
- "developer_mode_only": 0,
- "disable_user_customization": 0,
+ "content": "[{\"id\":\"L1CrRCF0pi\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Shortcuts</b></span>\",\"col\":12}},{\"id\":\"YaaHsT-AzS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Grant Programme\",\"col\":3}},{\"id\":\"lkiZZNi1fL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Grant Parameter\",\"col\":3}},{\"id\":\"EOW39uz-4P\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Grant Discipline\",\"col\":3}},{\"id\":\"N6TSZGoUYF\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Grant Call Template\",\"col\":3}},{\"id\":\"HP_R217VpX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Grant Call\",\"col\":3}},{\"id\":\"n5HyG5ltQt\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Grant Budget Template\",\"col\":3}},{\"id\":\"2uwqwyI2vm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Grant Application\",\"col\":3}},{\"id\":\"71kZug6_AT\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Grant Review Assignment\",\"col\":3}},{\"id\":\"vwxejfRf1o\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Grant Project\",\"col\":3}},{\"id\":\"oiMNHthc43\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Grant Disbursement Entry\",\"col\":3}},{\"id\":\"RorUksCDS7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Grant Project Activity\",\"col\":3}},{\"id\":\"ChcgEuKk8c\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Grant Project Report\",\"col\":3}},{\"id\":\"VYOtcVrBhc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Grant Management Settings\",\"col\":3}},{\"id\":\"J-lcCxHM8W\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"National R&D Indicators Survey\",\"col\":3}},{\"id\":\"GFt9Q6GpZF\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"Wol0ILqNb0\",\"type\":\"card\",\"data\":{\"card_name\":\"Loan Management\",\"col\":4}},{\"id\":\"gEedOp9sXC\",\"type\":\"card\",\"data\":{\"card_name\":\"Grant Application\",\"col\":4}},{\"id\":\"2u2c3r-SWr\",\"type\":\"card\",\"data\":{\"card_name\":\"Membership\",\"col\":4}},{\"id\":\"fleJOjHKPD\",\"type\":\"card\",\"data\":{\"card_name\":\"Volunteer\",\"col\":4}},{\"id\":\"qg1IBfKEQY\",\"type\":\"card\",\"data\":{\"card_name\":\"Custom Report\",\"col\":4}}]",
+ "creation": "2023-07-28 14:04:38.837624",
+ "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
- "extends_another_page": 0,
+ "for_user": "",
  "hide_custom": 0,
  "icon": "non-profit",
  "idx": 0,
- "is_default": 0,
- "is_standard": 1,
+ "is_hidden": 0,
  "label": "Grant",
  "links": [
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Loan Management",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Loan Type",
+   "link_count": 0,
    "link_to": "Loan Type",
    "link_type": "DocType",
    "onboard": 0,
-   "only_for": "",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Loan Application",
+   "link_count": 0,
    "link_to": "Loan Application",
    "link_type": "DocType",
    "onboard": 0,
@@ -46,6 +36,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Loan",
+   "link_count": 0,
    "link_to": "Loan",
    "link_type": "DocType",
    "onboard": 0,
@@ -55,25 +46,17 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Grant Application",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Grant Application",
+   "link_count": 0,
    "link_to": "Grant Application",
    "link_type": "DocType",
    "onboard": 0,
-   "only_for": "",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Grant Project",
+   "link_count": 0,
    "link_to": "Grant Project",
    "link_type": "DocType",
    "onboard": 0,
@@ -83,6 +66,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Grant Application Activity",
+   "link_count": 0,
    "link_to": "Grant Application Activity",
    "link_type": "DocType",
    "onboard": 0,
@@ -92,133 +76,107 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Grant Application Review",
+   "link_count": 0,
    "link_to": "Grant Application Review",
    "link_type": "DocType",
    "onboard": 0,
-   "only_for": "",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Grant Application Endorsement",
+   "link_count": 0,
    "link_to": "Grant Application Endorsement",
    "link_type": "DocType",
    "onboard": 0,
-   "only_for": "",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Grant Application Budget Review",
+   "link_count": 0,
    "link_to": "Grant Application Budget Review",
    "link_type": "DocType",
    "onboard": 0,
-   "only_for": "",
    "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Membership",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Card Break"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Member",
+   "link_count": 0,
    "link_to": "Member",
    "link_type": "DocType",
    "onboard": 0,
-   "only_for": "",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Membership",
+   "link_count": 0,
    "link_to": "Membership",
    "link_type": "DocType",
    "onboard": 0,
-   "only_for": "",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Membership Type",
+   "link_count": 0,
    "link_to": "Membership Type",
    "link_type": "DocType",
    "onboard": 0,
-   "only_for": "",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Non Profit Settings",
+   "link_count": 0,
    "link_to": "Non Profit Settings",
    "link_type": "DocType",
    "onboard": 0,
-   "only_for": "",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Volunteer",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Volunteer",
+   "link_count": 0,
    "link_to": "Volunteer",
    "link_type": "DocType",
    "onboard": 0,
-   "only_for": "",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Volunteer Type",
+   "link_count": 0,
    "link_to": "Volunteer Type",
    "link_type": "DocType",
    "onboard": 0,
-   "only_for": "",
    "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Custom Report",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Card Break"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Grant Project Summary",
+   "link_count": 0,
    "link_to": "Grant Project Summary",
    "link_type": "Report",
    "onboard": 0,
-   "only_for": "",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Grant Application Summary",
+   "link_count": 0,
    "link_to": "Grant Application Summary",
    "link_type": "Report",
    "onboard": 0,
@@ -228,6 +186,7 @@
    "hidden": 0,
    "is_query_report": 1,
    "label": "Grant Application Review Analytics",
+   "link_count": 0,
    "link_to": "Grant Application Review Analytics",
    "link_type": "Report",
    "onboard": 0,
@@ -237,105 +196,352 @@
    "hidden": 0,
    "is_query_report": 1,
    "label": "Grant Application Budget Review Analytics",
+   "link_count": 0,
    "link_to": "Grant Application Budget Review Analytics",
    "link_type": "Report",
    "onboard": 0,
-   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Loan Management",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Loan Type",
+   "link_count": 0,
+   "link_to": "Loan Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Loan Application",
+   "link_count": 0,
+   "link_to": "Loan Application",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Loan",
+   "link_count": 0,
+   "link_to": "Loan",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Grant Application",
+   "link_count": 6,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Grant Application",
+   "link_count": 0,
+   "link_to": "Grant Application",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Grant Project",
+   "link_count": 0,
+   "link_to": "Grant Project",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Grant Application Activity",
+   "link_count": 0,
+   "link_to": "Grant Application Activity",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Grant Application Review",
+   "link_count": 0,
+   "link_to": "Grant Application Review",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Grant Application Endorsement",
+   "link_count": 0,
+   "link_to": "Grant Application Endorsement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Grant Application Endorsement",
+   "link_count": 0,
+   "link_to": "Grant Application Endorsement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Membership",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Member",
+   "link_count": 0,
+   "link_to": "Member",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Membership",
+   "link_count": 0,
+   "link_to": "Membership",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Membership Type",
+   "link_count": 0,
+   "link_to": "Membership Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Non Profit Settings",
+   "link_count": 0,
+   "link_to": "Non Profit Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Volunteer",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Volunteer",
+   "link_count": 0,
+   "link_to": "Volunteer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Volunteer Type",
+   "link_count": 0,
+   "link_to": "Volunteer Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Custom Report",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Grant Project Summary",
+   "link_count": 0,
+   "link_to": "Grant Project Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Grant Application Summary",
+   "link_count": 0,
+   "link_to": "Grant Application Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Grant Application Review Analytics",
+   "link_count": 0,
+   "link_to": "Grant Application Review Analytics",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Grant Application Budget Review Analytics",
+   "link_count": 0,
+   "link_to": "Grant Application Budget Review Analytics",
+   "link_type": "Report",
+   "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2022-06-24 13:25:59.007963",
+ "modified": "2023-07-28 14:47:36.673388",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant",
+ "number_cards": [],
  "owner": "Administrator",
- "pin_to_bottom": 0,
- "pin_to_top": 0,
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 14.0,
  "shortcuts": [
   {
-   "doc_view": "",
-   "label": "Grant Programme",
-   "link_to": "Grant Programme",
-   "restrict_to_domain": "",
-   "type": "DocType"
-  },
-  {
-   "doc_view": "",
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Grant Parameter",
    "link_to": "Grant Parameter",
    "type": "DocType"
   },
   {
-   "doc_view": "",
+   "doc_view": "List",
+   "label": "Grant Programme",
+   "link_to": "Grant Programme",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Grant Discipline",
    "link_to": "Grant Discipline",
    "type": "DocType"
   },
   {
-   "doc_view": "",
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Grant Call Template",
    "link_to": "Grant Call Template",
    "type": "DocType"
   },
   {
-   "doc_view": "",
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Grant Call",
    "link_to": "Grant Call",
    "type": "DocType"
   },
   {
-   "doc_view": "",
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Grant Budget Template",
    "link_to": "Grant Budget Template",
    "type": "DocType"
   },
   {
-   "doc_view": "",
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Grant Application",
    "link_to": "Grant Application",
    "type": "DocType"
   },
   {
-   "doc_view": "",
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Grant Review Assignment",
-   "link_to": "Grant Review Assignment",
+   "link_to": "Grant Review Assignment Application",
    "type": "DocType"
   },
   {
-   "doc_view": "",
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Grant Project",
    "link_to": "Grant Project",
    "type": "DocType"
   },
   {
-   "doc_view": "",
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Grant Disbursement Entry",
    "link_to": "Grant Disbursement Entry",
    "type": "DocType"
   },
   {
-   "doc_view": "",
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Grant Project Activity",
    "link_to": "Grant Project Activity",
    "type": "DocType"
   },
   {
-   "doc_view": "",
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Grant Project Report",
    "link_to": "Grant Project Report",
    "type": "DocType"
   },
   {
-   "doc_view": "",
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Grant Management Settings",
    "link_to": "Grant Management Settings",
    "type": "DocType"
   },
   {
-   "doc_view": "",
+   "color": "Grey",
+   "doc_view": "List",
    "label": "National R&D Indicators Survey",
    "link_to": "National Research and Development Indicators Survey",
    "type": "DocType"
   }
- ]
+ ],
+ "title": "Grant"
 }
