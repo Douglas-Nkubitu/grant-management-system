@@ -8,7 +8,7 @@ from frappe.integrations.utils import get_payment_gateway_controller
 from frappe.model.document import Document
 from frappe.utils import cint, get_link_to_form
 
-from erpnext.non_profit.doctype.membership_type.membership_type import get_membership_type
+from grant_management_system.grant_management_system.doctype.membership_type.membership_type import get_membership_type
 
 
 class Member(Document):
