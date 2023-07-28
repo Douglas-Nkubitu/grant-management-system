@@ -13,7 +13,7 @@ from frappe.utils import add_days, add_months, add_years, get_link_to_form, getd
 
 import erpnext
 from erpnext import get_company_currency
-from erpnext.non_profit.doctype.member.member import create_member
+from grant_management_system.grant_management_system.doctype.member.member import create_member
 
 
 class Membership(Document):
