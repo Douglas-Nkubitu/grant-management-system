@@ -10,7 +10,7 @@ from frappe.email import sendmail_to_system_managers
 from frappe.model.document import Document
 from frappe.utils import flt, get_link_to_form, getdate
 
-from erpnext.non_profit.doctype.membership.membership import verify_signature
+from grant_management_system.grant_management_system.doctype.membership.membership import verify_signature
 
 
 class Donation(Document):
