@@ -9,7 +9,7 @@ from frappe.model.document import Document
 from frappe.utils import add_days, flt, get_datetime, get_time, get_url, nowtime, today
 
 from erpnext.controllers.queries import get_filters_cond
-from erpnext.hr.doctype.holiday_list.holiday_list import is_holiday
+from hrms.hr.doctype.holiday_list.holiday_list import is_holiday
 
 class GrantProject(Document):
 	def validate(self):
